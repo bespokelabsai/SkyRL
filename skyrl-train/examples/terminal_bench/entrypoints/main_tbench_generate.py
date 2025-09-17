@@ -2,6 +2,7 @@
 uv run --isolated --extra vllm --extra sandboxes -m examples.terminal_bench.main_tbench_generate
 """
 
+from importlib import import_module
 import ray
 import asyncio
 import hydra
@@ -67,7 +68,12 @@ class TerminalBenchGenerateExp(BasePPOExp):
         )
 
         # Start generation
-        asyncio.run(generator.generate(input_batch))
+        generator_output = asyncio.run(generator.generate(input_batch))
+        # import pdb; pdb.set_trace()
+        reward = generator_output['rewards']
+        print(reward)
+        accuracy = sum(reward) / len(reward)
+        print(f"Accuracy: {accuracy:.4f}")
 
 
 @ray.remote(num_cpus=1)

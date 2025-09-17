@@ -9,7 +9,8 @@ def build_row(task_path: str, data_source: str) -> Dict[str, Any]:
     task_path_abs = os.path.abspath(task_path)
     return {
         "data_source": data_source,
-        "prompt": "dummy",
+        # "prompt": "dummy",
+        "prompt": [{"role": "user", "content": "dummy"}],
         "terminal_bench": {
             "task_path": task_path_abs,
         },

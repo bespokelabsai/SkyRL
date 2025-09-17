@@ -343,7 +343,14 @@ class Trial:
             raise e
 
         finally:
-            await self._cleanup_and_finalize()
+            # await self._cleanup_and_finalize()
+
+            # TODO: added this because it always have trouble shutting it down in the end
+            try:
+                await self._cleanup_and_finalize()
+            except Exception as e:
+                print("Error during cleanup:", e)
+            
 
         return self._result
 
