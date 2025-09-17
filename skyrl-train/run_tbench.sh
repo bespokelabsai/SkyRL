@@ -30,9 +30,9 @@ uv run --isolated --extra vllm --extra sandboxes --with "sandbox@./sandboxes" -m
   terminal_bench_config.max_episodes=16 \
   terminal_bench_config.sandboxes_dir=$SANDBOXES_DIR \
   trainer.algorithm.advantage_estimator="grpo" \
-  trainer.policy.model.path="Qwen/Qwen3-Coder-30B-A3B-Instruct" \
+  trainer.policy.model.path="Qwen/Qwen3-8B" \
   trainer.placement.colocate_all=true \
-  trainer.strategy=deepspeed \
+  trainer.strategy=fsdp2 \
   trainer.placement.policy_num_gpus_per_node=$NUM_GPUS \
   trainer.placement.ref_num_gpus_per_node=$NUM_GPUS \
   generator.num_inference_engines=1 \
@@ -68,5 +68,6 @@ uv run --isolated --extra vllm --extra sandboxes --with "sandbox@./sandboxes" -m
   trainer.resume_mode=null \
   trainer.ckpt_path="$HOME/ckpts/ez_sweagent_8B_ckpt" \
   trainer.gradient_checkpointing_use_reentrant=true \
-  trainer.ref.fsdp_config.cpu_offload=false
+  trainer.ref.fsdp_config.cpu_offload=false \
+  trainer.hf_save_interval=1000000 \
   $@

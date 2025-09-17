@@ -370,7 +370,8 @@ Please begin by asking several questions (at least five, more if necessary) "
 
             summary = await self._summarize(chat, original_instruction, session)
 
-            summary_prompt = f"{summary}\n\n{prompt}"
+            # summary_prompt = f"{summary}\n\n{prompt}"
+            summary_prompt = summary
 
             if prompt_path is not None:
                 prompt_path.write_text(summary_prompt)
