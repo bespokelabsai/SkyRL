@@ -143,6 +143,7 @@ async def handle_chat_completion(raw_request: Request) -> JSONResponse:
             raise exception_message
         else:
             # logger.error(f"ValueError in chat completion: {error_message}\n{traceback.format_exc()}")
+            print("???????????????????????????")
             raise e
 
             
