@@ -1,13 +1,13 @@
-## Verifiers + SkyRL Guide
+## Guide: Verifiers (Environments Hub) + SkyRL
 
-This directory holds the workflow to train on Verifiers environments with SkyRL.
+This directory holds the workflow to train on Environments Hub environments with SkyRL.
 
 To start training, follow three simple steps:
 1) Install the environment from Environments Hub.
 2) Prepare the environment's training and validation datasets.
 3) Launch training!
 
-Start by entering the `skyrl-train` directory:
+Start by following the SkyRL [installation instructions](https://skyrl.readthedocs.io/en/latest/getting-started/installation.html), then enter the `skyrl-train` directory:
 ```bash
 cd SkyRL/skyrl-train
 ```

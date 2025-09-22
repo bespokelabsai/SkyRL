@@ -8,7 +8,7 @@ set -x
 # bash examples/terminal_bench/run_tbench_gen.sh
 # /root/ckpts/ez_sweagent_8B_ckpt/global_step_13/policy
 DATA_DIR="$HOME/data/terminal_bench"
-NUM_GPUS=2
+NUM_GPUS=1
 LOGGER="wandb"  # change to "wandb" to export to wandb
 TBENCH_CONFIG_DIR="examples/terminal_bench"
 SANDBOXES_DIR="sandboxes" # TODO: For now, `sandboxes` is cloned into SkyRL/skyrl-train.
@@ -17,7 +17,7 @@ uv run --isolated --extra vllm --extra sandboxes --with "sandbox@./sandboxes" -m
   data.train_data="['$DATA_DIR/train.parquet']" \
   hydra.searchpath=[file://$TBENCH_CONFIG_DIR] \
   +terminal_bench_config=terminal_bench \
-  terminal_bench_config.max_episodes=10000000 \
+  terminal_bench_config.max_episodes=16 \
   terminal_bench_config.sandboxes_dir=$SANDBOXES_DIR \
   trainer.algorithm.advantage_estimator="grpo" \
   trainer.policy.model.path="Qwen/Qwen3-8B" \
@@ -26,7 +26,7 @@ uv run --isolated --extra vllm --extra sandboxes --with "sandbox@./sandboxes" -m
   trainer.placement.policy_num_gpus_per_node=$NUM_GPUS \
   trainer.placement.ref_num_gpus_per_node=$NUM_GPUS \
   generator.num_inference_engines=1 \
-  generator.inference_engine_tensor_parallel_size=2 \
+  generator.inference_engine_tensor_parallel_size=1 \
   trainer.epochs=5 \
   trainer.eval_batch_size=8 \
   trainer.eval_before_train=false \
