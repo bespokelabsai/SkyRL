@@ -19,7 +19,8 @@ from skyrl_train.entrypoints.main_base import (
     config_dir,
 )
 from skyrl_train.generators.base import GeneratorInput
-from examples.terminal_bench.generator.terminal_bench_generator import TerminalBenchGenerator
+from examples.terminal_bench.terminal_bench_generator import TerminalBenchGenerator
+from examples.terminal_bench.dataset import TerminalBenchTaskDataset
 
 
 class TerminalBenchGenerateExp(BasePPOExp):
@@ -47,6 +48,19 @@ class TerminalBenchGenerateExp(BasePPOExp):
         asyncio.run(inference_engine_client.wake_up())
 
         return self.get_generator(self.cfg, tokenizer, inference_engine_client)
+    
+    def get_train_dataset(self):
+        """Initializes the training dataset.
+        Returns:
+            TerminalBenchTaskDataset: The training dataset.
+        """
+        prompts_dataset = TerminalBenchTaskDataset(
+            data_files=self.cfg.data.train_data,
+        )
+        assert (
+            len(prompts_dataset) >= self.cfg.trainer.train_batch_size
+        ), f"dataset should be atleast as large as `train_batch_size` {self.cfg.trainer.train_batch_size}, got size {len(prompts_dataset)}"
+        return prompts_dataset
 
     def run(self):
         generator = self._setup_generator()
@@ -61,9 +75,9 @@ class TerminalBenchGenerateExp(BasePPOExp):
             env_extras.append(extra)
 
         input_batch = GeneratorInput(
-            prompts=prompts,
+            prompts=[item["prompt"] for item in self.train_dataset],
             env_classes=None,
-            env_extras=env_extras,
+            env_extras=None,
             sampling_params=None,
         )
 

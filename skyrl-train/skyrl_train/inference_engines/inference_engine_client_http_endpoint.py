@@ -256,19 +256,43 @@ def create_app() -> fastapi.FastAPI:
 
         Note that the specific fields inside the request and response depend on the backend you use.
         If `config.generator.backend` is `vllm`, then the request and response will be vLLM's.
-        Same for SGLang. SkyRL does not perform field validation beyond `model` and `trajectory_id`,
+        Same for SGLang. SkyRL does not perform field validation beyond `model` and `session_id`,
         and otherwise depends on the underlying engines' validation.
 
-        Make sure you add in `trajectory_id` to ensure load balancing and sticky routing. The same
-        agentic rollout / session should share the same `trajectory_id` so they get routed to the
-        same engine for better prefix caching. If unprovided, we will route to a random engine which
-        is not performant.
+        Make sure you add in `session_id` (a string or an integer) to ensure load balancing and
+        sticky routing. The same agentic rollout / session should share the same `session_id` so
+        they get routed to the same engine for better prefix caching. If unprovided, we will route
+        to a random engine which is not performant.
 
         API reference:
         - https://docs.vllm.ai/en/latest/serving/openai_compatible_server.html
         - https://docs.sglang.ai/basic_usage/openai_api_completions.html
         """
-        return await handle_chat_completion(raw_request)
+        return await handle_openai_request(raw_request, endpoint="/chat/completions")
+
+    @app.post("/v1/completions")
+    async def completions(raw_request: Request):
+        """
+        Takes in OpenAI's `CompletionRequest` and returns OpenAI's `CompletionResponse`.
+
+        Note that the specific fields inside the request and response depend on the backend you use.
+        If `config.generator.backend` is `vllm`, then the request and response will be vLLM's.
+        SkyRL only validates the fields `model` and `session_id`, and otherwise offloads
+        field validation to the underlying engines.
+
+        Make sure you add in `session_id` to ensure load balancing and sticky routing. Since
+        `request["prompt"]` can be `Union[list[int], list[list[int]], str, list[str]]`, i.e.
+        {batched, single} x {string, token IDs}, we follow the following logic for request routing:
+        - For batched request: `session_id`, if provided, must have the same length as `request["prompt"]`
+          so that each `request["prompt"][i]` is routed based on `session_id[i]`.
+        - For single request: `session_id`, if provided, must be a single integer or a singleton
+          list, where each `session_id` is a string or an integer.
+
+        API reference:
+        - https://docs.vllm.ai/en/latest/serving/openai_compatible_server.html
+        - https://docs.sglang.ai/basic_usage/openai_api_completions.html
+        """
+        return await handle_openai_request(raw_request, endpoint="/completions")
 
     # Health check endpoint
     # All inference engine replicas are initialized before creating `InferenceEngineClient`, and thus

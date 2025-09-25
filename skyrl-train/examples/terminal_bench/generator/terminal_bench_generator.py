@@ -6,10 +6,10 @@ from skyrl_train.generators.utils import get_rollout_metrics
 from skyrl_train.inference_engines.inference_engine_client import InferenceEngineClient
 from omegaconf import DictConfig
 from pathlib import Path
-from sandbox.models.trial.config import TrialConfig, AgentConfig, LocalTaskConfig
-from sandbox.models.task.id import LocalTaskId
-from sandbox.models.agent.name import AgentName
-from sandbox.trial.trial import Trial
+from sandboxes.models.trial.config import TrialConfig, AgentConfig, TaskConfig
+from sandboxes.models.task.id import LocalTaskId
+from sandboxes.models.agent.name import AgentName
+from sandboxes.trial.trial import Trial
 
 
 @dataclass
@@ -85,7 +85,8 @@ class TerminalBenchGenerator(GeneratorInterface):
         """
         if self.agent_name == "terminus":
             trial_config = TrialConfig(
-                task=LocalTaskConfig(id=LocalTaskId(path=task_path)),
+                # task=TaskConfig(id=LocalTaskId(path=task_path)),
+                task=TaskConfig(path=task_path),
                 trials_dir=Path(self.trials_dir),
                 agent=AgentConfig(
                     name=AgentName.TERMINUS_2.value,
@@ -95,7 +96,8 @@ class TerminalBenchGenerator(GeneratorInterface):
             )
         elif self.agent_name == "oracle":
             trial_config = TrialConfig(
-                task=LocalTaskConfig(id=LocalTaskId(path=task_path)),
+                # task=TaskConfig(id=LocalTaskId(path=task_path)),
+                task=TaskConfig(path=task_path),
                 trials_dir=Path(self.trials_dir),
                 agent=AgentConfig(
                     name=AgentName.ORACLE,
