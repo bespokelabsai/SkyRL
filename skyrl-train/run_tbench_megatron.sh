@@ -37,7 +37,7 @@ RANKS_TO_PROFILE="[0]"
 SAVE_PATH="$HOME/megatron_prof/tp${MEGATRON_TP}_pp${MEGATRON_PP}_cp${MEGATRON_CP}_${MODEL_NAME}"
 
 export SKYRL_PYTHONPATH_EXPORT=1
-
+# data.train_data="['$DATA_DIR/train.parquet']" \
 uv run --isolated --extra $INFERENCE_BACKEND --extra sandboxes --extra mcore --with "sandboxes@./sandboxes" -m examples.terminal_bench.entrypoints.main_tbench \
   data.train_data="['$DATA_DIR/train.parquet']" \
   hydra.searchpath=[file://$TBENCH_CONFIG_DIR] \
