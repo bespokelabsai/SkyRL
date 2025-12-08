@@ -1,18 +1,18 @@
 # My key
-export DAYTONA_API_KEY=YOUR_KEY_HERE
-export WANDB_API_KEY=YOUR_KEY_HERE
+export DAYTONA_API_KEY="dtn_19b26f08b6a7f295e341c23e64096af54fb2b008e38415c4221f2264f17ff791"
+export WANDB_API_KEY="854a2b39e99ffee11c76d1003eb8a777045687e9"
 
 # Got after hf download open-thoughts/OpenThoughts-Agent-v1-RL --repo-type=dataset
 # cd into the downloaded folder, say /path/to/.cache/huggingface/hub/datasets--open-thoughts--OpenThoughts-Agent-v1-RL/snapshots/hash_code
 # python extract_parquet_tasks.py tasks_new.parquet ./extracted_tasks
-TRAIN_DATA="['/home/ec2-user/.cache/huggingface/hub/datasets--open-thoughts--OpenThoughts-Agent-v1-RL/snapshots/e4636fa481f6a5a540c74340cf69b2d28150978f/extracted_tasks']"
+TRAIN_DATA="['$HOME/ez_apex_281']"
 # Got after hf download open-thoughts/OpenThoughts-TB-dev --repo-type=dataset
-EVAL_DATA="['/home/ec2-user/.cache/huggingface/hub/datasets--open-thoughts--OpenThoughts-TB-dev/snapshots/c1df0436e2d58c89f67d552c36cab9172280c5ae']"
+EVAL_DATA="['$HOME/.cache/huggingface/hub/datasets--open-thoughts--OpenThoughts-TB-dev/snapshots/0d54f719f34dca712c8d6ef0f51df4670a2a287a']"
 
-CHAT_TEMPLATE_PATH="/home/ec2-user/dcagent-workspace/SkyRL/skyrl-train/examples/terminal_bench/qwen3_thinking_acc.jinja2"
-TRIALS_DIR="/home/ec2-user/trials_run"
-CKPTS_DIR="/home/ec2-user/otagent/ckpts"
-EXPORTS_DIR="/home/ec2-user/otagent/exports"
+CHAT_TEMPLATE_PATH="$HOME/SkyRL/skyrl-train/examples/terminal_bench/qwen3_thinking_acc.jinja2"
+TRIALS_DIR="$HOME/trials"
+CKPTS_DIR="$HOME/ckpts"
+EXPORTS_DIR="$HOME/exports"
 
 # Run SkyRL command
 python -m examples.terminal_bench.entrypoints.main_tbench \
@@ -22,10 +22,10 @@ python -m examples.terminal_bench.entrypoints.main_tbench \
   hydra.searchpath=['file://examples/terminal_bench'] \
   +terminal_bench_config=terminal_bench \
   +terminal_bench_config.agent_name=terminus \
-  +terminal_bench_config.max_episodes=32 \
+  +terminal_bench_config.max_episodes=64 \
   +terminal_bench_config.trials_dir=$TRIALS_DIR \
-  +terminal_bench_config.override_memory_mb=1024 \
-  +terminal_bench_config.override_storage_mb=1024 \
+  +terminal_bench_config.override_memory_mb=2048 \
+  +terminal_bench_config.override_storage_mb=2048 \
   +terminal_bench_config.override_cpus=1 \
   +terminal_bench_config.enable_summarize=false \
   trainer.export_path=$EXPORTS_DIR \
@@ -42,15 +42,15 @@ python -m examples.terminal_bench.entrypoints.main_tbench \
   +generator.engine_init_kwargs.custom_chat_template_chat_completion_path=$CHAT_TEMPLATE_PATH \
   trainer.epochs=3 \
   trainer.eval_batch_size=128 \
-  trainer.eval_before_train=true \
+  trainer.eval_before_train=false \
   trainer.eval_interval=20 \
   trainer.update_epochs_per_batch=1 \
   trainer.train_batch_size=64 \
   trainer.policy_mini_batch_size=64 \
   trainer.micro_forward_batch_size_per_gpu=1 \
   trainer.micro_train_batch_size_per_gpu=1 \
-  trainer.ckpt_interval=5 \
-  trainer.hf_save_interval=5 \
+  trainer.ckpt_interval=2 \
+  trainer.hf_save_interval=2 \
   trainer.max_prompt_length=2048 \
   generator.sampling_params.max_generate_length=30720 \
   trainer.policy.optimizer_config.lr=1.0e-6 \
@@ -59,8 +59,8 @@ python -m examples.terminal_bench.entrypoints.main_tbench \
   generator.eval_n_samples_per_prompt=8 \
   generator.gpu_memory_utilization=0.8 \
   trainer.logger=wandb \
-  trainer.project_name=dc-agent \
-  trainer.run_name=otagent-rl \
+  trainer.project_name=apex_rl \
+  trainer.run_name=ot8b \
   trainer.resume_mode=latest \
   generator.backend=vllm \
   generator.run_engines_locally=true \
