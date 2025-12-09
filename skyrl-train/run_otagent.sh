@@ -12,7 +12,7 @@ EVAL_DATA="['$HOME/.cache/huggingface/hub/datasets--open-thoughts--OpenThoughts-
 CHAT_TEMPLATE_PATH="$HOME/SkyRL/skyrl-train/examples/terminal_bench/qwen3_thinking_acc.jinja2"
 TRIALS_DIR="$HOME/trials"
 CKPTS_DIR="$HOME/ckpts"
-EXPORTS_DIR="$HOME/exports"
+EXPORTS_DIR="$HOME/ckpts_hf"
 
 # Run SkyRL command
 python -m examples.terminal_bench.entrypoints.main_tbench \
@@ -25,8 +25,8 @@ python -m examples.terminal_bench.entrypoints.main_tbench \
   +terminal_bench_config.max_episodes=64 \
   +terminal_bench_config.trials_dir=$TRIALS_DIR \
   +terminal_bench_config.override_memory_mb=2048 \
-  +terminal_bench_config.override_storage_mb=2048 \
-  +terminal_bench_config.override_cpus=1 \
+  +terminal_bench_config.override_storage_mb=4096 \
+  +terminal_bench_config.override_cpus=2 \
   +terminal_bench_config.enable_summarize=false \
   trainer.export_path=$EXPORTS_DIR \
   trainer.ckpt_path=$CKPTS_DIR \
@@ -60,7 +60,7 @@ python -m examples.terminal_bench.entrypoints.main_tbench \
   generator.gpu_memory_utilization=0.8 \
   trainer.logger=wandb \
   trainer.project_name=apex_rl \
-  trainer.run_name=ot8b \
+  trainer.run_name=ot8b_resumed \
   trainer.resume_mode=latest \
   generator.backend=vllm \
   generator.run_engines_locally=true \
