@@ -5,14 +5,15 @@ export WANDB_API_KEY="854a2b39e99ffee11c76d1003eb8a777045687e9"
 # Got after hf download open-thoughts/OpenThoughts-Agent-v1-RL --repo-type=dataset
 # cd into the downloaded folder, say /path/to/.cache/huggingface/hub/datasets--open-thoughts--OpenThoughts-Agent-v1-RL/snapshots/hash_code
 # python extract_parquet_tasks.py tasks_new.parquet ./extracted_tasks
-TRAIN_DATA="['$HOME/ez_apex_281']"
+TRAIN_DATA="['/data/ez_apex_281']"
+# TRAIN_DATA="['$HOME/.cache/huggingface/hub/datasets--open-thoughts--OpenThoughts-Agent-v1-RL/snapshots/fe46b463573e7f849e1f317e4dbe9ee7cc668fdd/extracted_tasks']"
 # Got after hf download open-thoughts/OpenThoughts-TB-dev --repo-type=dataset
 EVAL_DATA="['$HOME/.cache/huggingface/hub/datasets--open-thoughts--OpenThoughts-TB-dev/snapshots/0d54f719f34dca712c8d6ef0f51df4670a2a287a']"
 
 CHAT_TEMPLATE_PATH="$HOME/SkyRL/skyrl-train/examples/terminal_bench/qwen3_thinking_acc.jinja2"
-TRIALS_DIR="$HOME/trials"
-CKPTS_DIR="$HOME/ckpts"
-EXPORTS_DIR="$HOME/ckpts_hf"
+TRIALS_DIR="/data/trials"
+CKPTS_DIR="/data/ckpts"
+EXPORTS_DIR="/data/ckpts_hf"
 
 # Run SkyRL command
 python -m examples.terminal_bench.entrypoints.main_tbench \
@@ -24,9 +25,9 @@ python -m examples.terminal_bench.entrypoints.main_tbench \
   +terminal_bench_config.agent_name=terminus \
   +terminal_bench_config.max_episodes=64 \
   +terminal_bench_config.trials_dir=$TRIALS_DIR \
-  +terminal_bench_config.override_memory_mb=2048 \
-  +terminal_bench_config.override_storage_mb=4096 \
-  +terminal_bench_config.override_cpus=2 \
+  +terminal_bench_config.override_memory_mb=1024 \
+  +terminal_bench_config.override_storage_mb=2048 \
+  +terminal_bench_config.override_cpus=1 \
   +terminal_bench_config.enable_summarize=false \
   trainer.export_path=$EXPORTS_DIR \
   trainer.ckpt_path=$CKPTS_DIR \
@@ -45,12 +46,12 @@ python -m examples.terminal_bench.entrypoints.main_tbench \
   trainer.eval_before_train=false \
   trainer.eval_interval=20 \
   trainer.update_epochs_per_batch=1 \
-  trainer.train_batch_size=64 \
-  trainer.policy_mini_batch_size=64 \
+  trainer.train_batch_size=32 \
+  trainer.policy_mini_batch_size=32 \
   trainer.micro_forward_batch_size_per_gpu=1 \
   trainer.micro_train_batch_size_per_gpu=1 \
-  trainer.ckpt_interval=2 \
-  trainer.hf_save_interval=2 \
+  trainer.ckpt_interval=1 \
+  trainer.hf_save_interval=1 \
   trainer.max_prompt_length=2048 \
   generator.sampling_params.max_generate_length=30720 \
   trainer.policy.optimizer_config.lr=1.0e-6 \
@@ -60,7 +61,7 @@ python -m examples.terminal_bench.entrypoints.main_tbench \
   generator.gpu_memory_utilization=0.8 \
   trainer.logger=wandb \
   trainer.project_name=apex_rl \
-  trainer.run_name=ot8b_resumed \
+  trainer.run_name=ot8b_overnight \
   trainer.resume_mode=latest \
   generator.backend=vllm \
   generator.run_engines_locally=true \

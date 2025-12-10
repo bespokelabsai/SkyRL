@@ -16,7 +16,7 @@ from harbor.trial.trial import Trial
 
 # We have N retries for each trial, if one of the rollout (out of n_samples_per_prompt) fails
 # after N attemptes, we skip this prompt altogether.
-MAX_NUM_RETRIES_PER_TRIAL = 2
+MAX_NUM_RETRIES_PER_TRIAL = 1
 
 @dataclass
 class TerminalBenchAgentOutput:
