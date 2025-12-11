@@ -44,7 +44,7 @@ python -m examples.terminal_bench.entrypoints.main_tbench \
   trainer.epochs=3 \
   trainer.eval_batch_size=128 \
   trainer.eval_before_train=false \
-  trainer.eval_interval=20 \
+  trainer.eval_interval=-1 \
   trainer.update_epochs_per_batch=1 \
   trainer.train_batch_size=32 \
   trainer.policy_mini_batch_size=32 \

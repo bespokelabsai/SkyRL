@@ -80,7 +80,37 @@ class TerminalBenchGenerator(GeneratorInterface):
                 )
             )
 
-        all_outputs: List[TerminalBenchAgentOutput] = await asyncio.gather(*tasks)
+        # all_outputs: List[TerminalBenchAgentOutput] = await asyncio.gather(*tasks)
+
+        # batch_size = 128
+        # all_outputs: List[TerminalBenchAgentOutput] = []
+
+        # # Now process tasks in sequential batches of 8
+        # for start in range(0, len(tasks), batch_size):
+        #     end = start + batch_size
+        #     chunk = tasks[start:end]
+
+        #     # Run this chunk concurrently
+        #     chunk_outputs = await asyncio.gather(*chunk)
+
+        #     # Preserve order
+        #     all_outputs.extend(chunk_outputs)
+        
+        batch_size = 64
+        semaphore = asyncio.Semaphore(batch_size)
+
+        async def run_with_limit(coro):
+            async with semaphore:
+                return await coro
+
+        # Wrap each original task with a semaphore-limited task
+        limited_tasks = [run_with_limit(t) for t in tasks]
+
+        # Run all tasks (but concurrency is now limited!)
+        all_outputs: List[TerminalBenchAgentOutput] = await asyncio.gather(*limited_tasks)
+
+
+
 
         # For a group of trajectories (n_samples_per_prompt trajectories for the same prompt), if one
         # of the trajectories fails, we skip the entire group. We also skip the group for rollout metric aggregation
