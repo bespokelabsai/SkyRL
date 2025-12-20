@@ -4,8 +4,8 @@ from ray.serve.llm import LLMConfig, build_openai_app
 
 llm_config1 = LLMConfig(
     model_loading_config=dict(
-        model_id="open-thoughts/OpenThinker-Agent-v1-SFT",
-        model_source="open-thoughts/OpenThinker-Agent-v1-SFT",
+        model_id="bespokelabs/Qwen3-8B-ot_step60_high",
+        model_source="bespokelabs/Qwen3-8B-ot_step60_high",
     ),
     deployment_config=dict(
         autoscaling_config=dict(

@@ -7,16 +7,16 @@ def main():
 
     processes = []
 
-    for i in range(1, 9):  # otagent1 ... otagent8
-        job_name = f"tb_w_summ{i}"
+    for i in range(5, 6):  # otagent1 ... otagent8
+        job_name = f"tb_step60_high{i}"
         print(f"=== Launching job: {job_name} ===")
 
         cmd = [
             "harbor", "run",
             "--dataset", "terminal-bench@2.0",
             "--agent", "terminus-2",
-            "--model", "hosted_vllm/bespokelabs/Qwen3-8B-ot_step43",
-            "--n-concurrent", "4",
+            "--model", "hosted_vllm/bespokelabs/Qwen3-8B-ot_step60_high",
+            "--n-concurrent", "32",
             "--env", "daytona",
             "--agent-kwarg", "api_base=http://localhost:8000/v1",
             "--agent-kwarg", "key=fake_key",
