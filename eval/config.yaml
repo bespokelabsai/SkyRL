@@ -6,7 +6,7 @@ orchestrator:
   n_concurrent_trials: 4
   quiet: false
   retry:
-    max_retries: 100
+    max_retries: 3
     exclude_exceptions:
       - AgentTimeoutError
       - VerifierTimeoutError
