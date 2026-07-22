@@ -49,7 +49,7 @@ dependencies = [
     { name = "pyyaml" },
     { name = "safetensors" },
     { name = "torch", version = "2.6.0+cu124", source = { url = "https://download.pytorch.org/whl/cu124/torch-2.6.0%2Bcu124-cp312-cp312-linux_x86_64.whl" }, marker = "extra == 'extra-8-skyagent-verl'" },
-    { name = "torch", version = "2.7.0+cu128", source = { registry = "https://download.pytorch.org/whl/cu128" }, marker = "extra == 'extra-8-skyagent-skyrl-train'" },
+    { name = "torch", version = "2.7.1+cu128", source = { registry = "https://download.pytorch.org/whl/cu128" }, marker = "extra == 'extra-8-skyagent-skyrl-train'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/c4/25/969456a95a90ed38f73f68d0f0915bdf1d76145d05054c59ad587b171150/accelerate-1.9.0.tar.gz", hash = "sha256:0e8c61f81af7bf37195b6175a545ed292617dd90563c88f49020aea5b6a0b47f", size = 383234, upload-time = "2025-07-16T16:24:54.526Z" }
 wheels = [
@@ -473,6 +473,22 @@ wheels = [
 ]
 
 [[package]]
+name = "cbor2"
+version = "6.1.3"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/3a/6f/07b4af8da8bd27f640362b1ac8271d80895407f2ede0c2bcc9433c06e1ca/cbor2-6.1.3.tar.gz", hash = "sha256:8d70680acb55c04ea5b5ad86da094f9612b53d5a8a65d0f5b3aafc3ce917ecbb", size = 89503, upload-time = "2026-07-04T10:36:48.793Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/31/16/cff14259c3d19a7f0ae88b6996fe4c85f6ff1764dad889ac8a39e843e39c/cbor2-6.1.3-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:3d939f55097c21e032f5a2d67592fcc57298986281f219356e2f519e4466f4ea", size = 412779, upload-time = "2026-07-04T10:36:04.975Z" },
+    { url = "https://files.pythonhosted.org/packages/50/6c/f3641d19b7b85a63cb2756c10164131489c2cb46b379ec51ae22283fefb9/cbor2-6.1.3-cp312-cp312-manylinux_2_28_aarch64.whl", hash = "sha256:b025009478d644dab407164fd60e3ef4381af284f5af6966df94c663756d949e", size = 457781, upload-time = "2026-07-04T10:36:06.349Z" },
+    { url = "https://files.pythonhosted.org/packages/55/85/0c55a66f3037056bfb8e1c7184168085fdea67ae5830404498bcf466233b/cbor2-6.1.3-cp312-cp312-manylinux_2_28_x86_64.whl", hash = "sha256:2226d32e102e375737656ad5d141ad8c6ae3e705e04e263f24756f0eb379c6c1", size = 468373, upload-time = "2026-07-04T10:36:07.769Z" },
+    { url = "https://files.pythonhosted.org/packages/46/74/40f7db3e0d880560193916a5c9b744fcf299558bed7113f77c28237c7c29/cbor2-6.1.3-cp312-cp312-musllinux_1_2_aarch64.whl", hash = "sha256:e61d465244d66ffed36492eef3b44d43795d76a2bba0663a2f15c186af7f7513", size = 523844, upload-time = "2026-07-04T10:36:09.404Z" },
+    { url = "https://files.pythonhosted.org/packages/b5/a1/b5e07d6a08441c3a552fe2ae48ccb7e9dfc5065b9f6a3bae9879b4f0fbc0/cbor2-6.1.3-cp312-cp312-musllinux_1_2_x86_64.whl", hash = "sha256:87fe7be8fab6ec4796aa127c1a52e09e79dbafd2aa31caf809cf04b8080a5975", size = 536238, upload-time = "2026-07-04T10:36:10.914Z" },
+    { url = "https://files.pythonhosted.org/packages/c9/99/e166be0fd74bf3a91f5a0d103e34883efbc438d970f72cc8200e274787e5/cbor2-6.1.3-cp312-cp312-win32.whl", hash = "sha256:da25d345f01e6a40b2e5c57ef96b4dcff7be69394fb62f0f70e07f437f2376a9", size = 279858, upload-time = "2026-07-04T10:36:12.247Z" },
+    { url = "https://files.pythonhosted.org/packages/d2/1b/90b4a121e40aba189c55a5822dd3c698eaf487e1d4a780ab18c804a5ef1c/cbor2-6.1.3-cp312-cp312-win_amd64.whl", hash = "sha256:d5514f693db6fa6f433b4096e9b604e6a7bf151c9ef1d2db86d0858e4c5e768f", size = 300929, upload-time = "2026-07-04T10:36:13.564Z" },
+    { url = "https://files.pythonhosted.org/packages/19/db/52c58a8d33464927389dde8103997b3fa51b081ce29b347ac2cc4fd0dfbf/cbor2-6.1.3-cp312-cp312-win_arm64.whl", hash = "sha256:3d43183d7beb3d3cd198d69b31bd2ee487ed704a1150c75cb0a66d6ad63d8c1a", size = 290908, upload-time = "2026-07-04T10:36:14.857Z" },
+]
+
+[[package]]
 name = "certifi"
 version = "2025.7.14"
 source = { registry = "https://pypi.org/simple" }
@@ -561,7 +577,7 @@ name = "click"
 version = "8.1.8"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "colorama", marker = "sys_platform == 'win32'" },
+    { name = "colorama", marker = "sys_platform == 'win32' or (extra == 'extra-8-skyagent-skyrl-train' and extra == 'extra-8-skyagent-verl')" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/b9/2e/0090cbf739cee7d23781ad4b89a9894a41538e4fcf4c31dcdd705b78eb8b/click-8.1.8.tar.gz", hash = "sha256:ed53c9d8990d83c2a27deae68e4ee337473f6330c040a31d4225c9574d16096a", size = 226593, upload-time = "2024-12-21T18:38:44.339Z" }
 wheels = [
@@ -629,7 +645,7 @@ resolution-markers = [
 dependencies = [
     { name = "pydantic" },
     { name = "torch", version = "2.6.0+cu124", source = { url = "https://download.pytorch.org/whl/cu124/torch-2.6.0%2Bcu124-cp312-cp312-linux_x86_64.whl" } },
-    { name = "transformers" },
+    { name = "transformers", version = "4.54.1", source = { registry = "https://pypi.org/simple" } },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/91/3e/f74c5dcca6552e15a00df4a78c6e4a8776a7c901acc5a8c1dd371698ef54/compressed_tensors-0.9.3.tar.gz", hash = "sha256:5bdc7774a6c217496cba7d6a4fca6ffac943e68adae0481ead6d036660c1b340", size = 66354, upload-time = "2025-04-02T17:05:52.263Z" }
 wheels = [
@@ -648,8 +664,8 @@ resolution-markers = [
 ]
 dependencies = [
     { name = "pydantic" },
-    { name = "torch", version = "2.7.0+cu128", source = { registry = "https://download.pytorch.org/whl/cu128" } },
-    { name = "transformers" },
+    { name = "torch", version = "2.7.1+cu128", source = { registry = "https://download.pytorch.org/whl/cu128" } },
+    { name = "transformers", version = "4.57.6", source = { registry = "https://pypi.org/simple" } },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/c0/86/d43d369abc81ec63ec7b8f6f27fc8b113ea0fd18a4116ae12063387b8b34/compressed_tensors-0.10.2.tar.gz", hash = "sha256:6de13ac535d7ffdd8890fad3d229444c33076170acaa8fab6bab8ecfa96c1d8f", size = 173459, upload-time = "2025-06-23T13:19:06.135Z" }
 wheels = [
@@ -850,6 +866,12 @@ wheels = [
 name = "depyf"
 version = "0.18.0"
 source = { registry = "https://pypi.org/simple" }
+resolution-markers = [
+    "platform_machine == 'aarch64' and sys_platform == 'linux'",
+    "platform_machine != 'aarch64' and sys_platform == 'linux'",
+    "sys_platform == 'darwin'",
+    "sys_platform != 'darwin' and sys_platform != 'linux'",
+]
 dependencies = [
     { name = "astor" },
     { name = "dill" },
@@ -857,6 +879,25 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/f9/ee/43a4cbba615abfc1eb2e5ff5eed3f80f38d58645b4d13d0ea06b9ca1909d/depyf-0.18.0.tar.gz", hash = "sha256:b99f0c383be949ae45d5d606fe444c71f375b55a57b8d6b20e7856670d52130d", size = 43050, upload-time = "2024-12-07T00:42:40.198Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/e7/d8/efc291d5c69a9905515055d23977643dd0d482ebfeb0dbabef1947ee75d8/depyf-0.18.0-py3-none-any.whl", hash = "sha256:007294d5bac19a38a0767d747be0f49b9ffdcea0394a822644142df22b33a3e1", size = 38839, upload-time = "2024-12-07T00:42:38.83Z" },
+]
+
+[[package]]
+name = "depyf"
+version = "0.19.0"
+source = { registry = "https://pypi.org/simple" }
+resolution-markers = [
+    "platform_machine != 'aarch64' and sys_platform == 'linux'",
+    "sys_platform == 'darwin'",
+    "sys_platform != 'darwin' and sys_platform != 'linux'",
+    "platform_machine == 'aarch64' and sys_platform == 'linux'",
+]
+dependencies = [
+    { name = "astor" },
+    { name = "dill" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/19/38/69157d711be575f1b9cf3177b64ef4ade44373fc02839f183fdd98ec2dd6/depyf-0.19.0.tar.gz", hash = "sha256:afed0916b32d141cc90fa6220df01885eda442ca43b297d5050eeb90b4a5cb44", size = 6171405, upload-time = "2025-04-20T08:07:41.224Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/28/4d/1192acbcdc5e843f5e5d51f6e8788f2b60a9fe0b578ac385ded67a0b0b26/depyf-0.19.0-py3-none-any.whl", hash = "sha256:040b35fc0997d49df024b7d094f2a7836f91e9ed02f49982dd37e70aa3285ad5", size = 39034, upload-time = "2025-04-20T08:07:37.036Z" },
 ]
 
 [[package]]
@@ -1149,6 +1190,25 @@ wheels = [
 ]
 
 [[package]]
+name = "fastuuid"
+version = "0.14.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/c3/7d/d9daedf0f2ebcacd20d599928f8913e9d2aea1d56d2d355a93bfa2b611d7/fastuuid-0.14.0.tar.gz", hash = "sha256:178947fc2f995b38497a74172adee64fdeb8b7ec18f2a5934d037641ba265d26", size = 18232, upload-time = "2025-10-19T22:19:22.402Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/02/a2/e78fcc5df65467f0d207661b7ef86c5b7ac62eea337c0c0fcedbeee6fb13/fastuuid-0.14.0-cp312-cp312-macosx_10_12_x86_64.macosx_11_0_arm64.macosx_10_12_universal2.whl", hash = "sha256:77e94728324b63660ebf8adb27055e92d2e4611645bf12ed9d88d30486471d0a", size = 510164, upload-time = "2025-10-19T22:31:45.635Z" },
+    { url = "https://files.pythonhosted.org/packages/2b/b3/c846f933f22f581f558ee63f81f29fa924acd971ce903dab1a9b6701816e/fastuuid-0.14.0-cp312-cp312-macosx_10_12_x86_64.whl", hash = "sha256:caa1f14d2102cb8d353096bc6ef6c13b2c81f347e6ab9d6fbd48b9dea41c153d", size = 261837, upload-time = "2025-10-19T22:38:38.53Z" },
+    { url = "https://files.pythonhosted.org/packages/54/ea/682551030f8c4fa9a769d9825570ad28c0c71e30cf34020b85c1f7ee7382/fastuuid-0.14.0-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:d23ef06f9e67163be38cece704170486715b177f6baae338110983f99a72c070", size = 251370, upload-time = "2025-10-19T22:40:26.07Z" },
+    { url = "https://files.pythonhosted.org/packages/14/dd/5927f0a523d8e6a76b70968e6004966ee7df30322f5fc9b6cdfb0276646a/fastuuid-0.14.0-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:0c9ec605ace243b6dbe3bd27ebdd5d33b00d8d1d3f580b39fdd15cd96fd71796", size = 277766, upload-time = "2025-10-19T22:37:23.779Z" },
+    { url = "https://files.pythonhosted.org/packages/16/6e/c0fb547eef61293153348f12e0f75a06abb322664b34a1573a7760501336/fastuuid-0.14.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:808527f2407f58a76c916d6aa15d58692a4a019fdf8d4c32ac7ff303b7d7af09", size = 278105, upload-time = "2025-10-19T22:26:56.821Z" },
+    { url = "https://files.pythonhosted.org/packages/2d/b1/b9c75e03b768f61cf2e84ee193dc18601aeaf89a4684b20f2f0e9f52b62c/fastuuid-0.14.0-cp312-cp312-manylinux_2_5_i686.manylinux1_i686.whl", hash = "sha256:2fb3c0d7fef6674bbeacdd6dbd386924a7b60b26de849266d1ff6602937675c8", size = 301564, upload-time = "2025-10-19T22:30:31.604Z" },
+    { url = "https://files.pythonhosted.org/packages/fc/fa/f7395fdac07c7a54f18f801744573707321ca0cee082e638e36452355a9d/fastuuid-0.14.0-cp312-cp312-musllinux_1_1_aarch64.whl", hash = "sha256:ab3f5d36e4393e628a4df337c2c039069344db5f4b9d2a3c9cea48284f1dd741", size = 459659, upload-time = "2025-10-19T22:31:32.341Z" },
+    { url = "https://files.pythonhosted.org/packages/66/49/c9fd06a4a0b1f0f048aacb6599e7d96e5d6bc6fa680ed0d46bf111929d1b/fastuuid-0.14.0-cp312-cp312-musllinux_1_1_i686.whl", hash = "sha256:b9a0ca4f03b7e0b01425281ffd44e99d360e15c895f1907ca105854ed85e2057", size = 478430, upload-time = "2025-10-19T22:26:22.962Z" },
+    { url = "https://files.pythonhosted.org/packages/be/9c/909e8c95b494e8e140e8be6165d5fc3f61fdc46198c1554df7b3e1764471/fastuuid-0.14.0-cp312-cp312-musllinux_1_1_x86_64.whl", hash = "sha256:3acdf655684cc09e60fb7e4cf524e8f42ea760031945aa8086c7eae2eeeabeb8", size = 450894, upload-time = "2025-10-19T22:27:01.647Z" },
+    { url = "https://files.pythonhosted.org/packages/90/eb/d29d17521976e673c55ef7f210d4cdd72091a9ec6755d0fd4710d9b3c871/fastuuid-0.14.0-cp312-cp312-win32.whl", hash = "sha256:9579618be6280700ae36ac42c3efd157049fe4dd40ca49b021280481c78c3176", size = 154374, upload-time = "2025-10-19T22:29:19.879Z" },
+    { url = "https://files.pythonhosted.org/packages/cc/fc/f5c799a6ea6d877faec0472d0b27c079b47c86b1cdc577720a5386483b36/fastuuid-0.14.0-cp312-cp312-win_amd64.whl", hash = "sha256:d9e4332dc4ba054434a9594cbfaf7823b57993d7d8e7267831c3e059857cf397", size = 156550, upload-time = "2025-10-19T22:27:49.658Z" },
+]
+
+[[package]]
 name = "filelock"
 version = "3.18.0"
 source = { registry = "https://pypi.org/simple" }
@@ -1219,7 +1279,7 @@ resolution-markers = [
 ]
 dependencies = [
     { name = "einops" },
-    { name = "torch", version = "2.7.0+cu128", source = { registry = "https://download.pytorch.org/whl/cu128" } },
+    { name = "torch", version = "2.7.1+cu128", source = { registry = "https://download.pytorch.org/whl/cu128" } },
 ]
 wheels = [
     { url = "https://github.com/Dao-AILab/flash-attention/releases/download/v2.8.0.post2/flash_attn-2.8.0.post2+cu12torch2.7cxx11abiFALSE-cp312-cp312-linux_x86_64.whl", hash = "sha256:5ebe77f75267d300d9f3d27cddccf6623fcef10f702c85b7414829d0eb7b9bf9" },
@@ -1239,7 +1299,7 @@ dependencies = [
     { name = "ninja" },
     { name = "numpy" },
     { name = "requests" },
-    { name = "torch", version = "2.7.0+cu128", source = { registry = "https://download.pytorch.org/whl/cu128" } },
+    { name = "torch", version = "2.7.1+cu128", source = { registry = "https://download.pytorch.org/whl/cu128" } },
 ]
 wheels = [
     { url = "https://download.pytorch.org/whl/cu128/flashinfer/flashinfer_python-0.2.6.post1%2Bcu128torch2.7-cp39-abi3-linux_x86_64.whl", hash = "sha256:47b6db5e7bdcaff1f44d97166aa780627c9c244567c667b959359d862d3d5335" },
@@ -1912,7 +1972,7 @@ source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "filelock" },
     { name = "fsspec" },
-    { name = "hf-xet", marker = "platform_machine == 'aarch64' or platform_machine == 'amd64' or platform_machine == 'arm64' or platform_machine == 'x86_64'" },
+    { name = "hf-xet", marker = "platform_machine == 'aarch64' or platform_machine == 'amd64' or platform_machine == 'arm64' or platform_machine == 'x86_64' or (extra == 'extra-8-skyagent-skyrl-train' and extra == 'extra-8-skyagent-verl')" },
     { name = "packaging" },
     { name = "pyyaml" },
     { name = "requests" },
@@ -2378,13 +2438,13 @@ dependencies = [
     { name = "flask" },
     { name = "gymnasium" },
     { name = "nltk" },
-    { name = "openai", version = "1.90.0", source = { registry = "https://pypi.org/simple" }, marker = "extra == 'extra-8-skyagent-skyrl-train'" },
-    { name = "openai", version = "1.98.0", source = { registry = "https://pypi.org/simple" }, marker = "extra == 'extra-8-skyagent-verl' or extra != 'extra-8-skyagent-skyrl-train'" },
+    { name = "openai" },
     { name = "pillow" },
     { name = "playwright" },
     { name = "text-generation" },
     { name = "tiktoken" },
-    { name = "transformers" },
+    { name = "transformers", version = "4.54.1", source = { registry = "https://pypi.org/simple" }, marker = "extra == 'extra-8-skyagent-verl'" },
+    { name = "transformers", version = "4.57.6", source = { registry = "https://pypi.org/simple" }, marker = "extra == 'extra-8-skyagent-skyrl-train' or extra != 'extra-8-skyagent-verl'" },
     { name = "types-tqdm" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/36/48/b3734dbe7058a48bda2065f5af99ac3d4d2cb0938ea5a4501b08e98e9317/libwebarena-0.0.4.tar.gz", hash = "sha256:78f76a415402cebf13b269b74b0a22c1888ae5513a2bde4b4dab781cb9445afd", size = 107046, upload-time = "2024-11-14T20:21:13.246Z" }
@@ -2398,7 +2458,8 @@ version = "0.6.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "torch", version = "2.6.0+cu124", source = { url = "https://download.pytorch.org/whl/cu124/torch-2.6.0%2Bcu124-cp312-cp312-linux_x86_64.whl" } },
-    { name = "triton", version = "3.2.0", source = { registry = "https://pypi.org/simple" } },
+    { name = "triton", version = "3.2.0", source = { registry = "https://pypi.org/simple" }, marker = "(platform_machine != 'aarch64' and sys_platform == 'linux' and extra == 'extra-8-skyagent-verl') or (platform_machine == 'aarch64' and extra == 'extra-8-skyagent-skyrl-train' and extra == 'extra-8-skyagent-verl') or (sys_platform != 'linux' and extra == 'extra-8-skyagent-skyrl-train' and extra == 'extra-8-skyagent-verl')" },
+    { name = "triton", version = "3.3.0", source = { registry = "https://pypi.org/simple" }, marker = "(platform_machine == 'aarch64' and extra == 'extra-8-skyagent-verl') or (platform_machine != 'aarch64' and extra == 'extra-8-skyagent-skyrl-train' and extra == 'extra-8-skyagent-verl') or (sys_platform != 'linux' and extra == 'extra-8-skyagent-verl')" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/1c/c9/6b99caca42761e1ebad1ad4c65f597537163c1fe7617c0cd3757d0a2de4c/liger_kernel-0.6.1.tar.gz", hash = "sha256:563e8d6c38f3676da532b16821045c523a2b429006ce7d4fe0375f1485041b8d", size = 3668300, upload-time = "2025-07-28T18:37:07.356Z" }
 wheels = [
@@ -2407,23 +2468,27 @@ wheels = [
 
 [[package]]
 name = "litellm"
-version = "1.74.15.post1"
+version = "1.84.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "aiohttp" },
     { name = "click" },
+    { name = "fastuuid" },
     { name = "httpx" },
     { name = "importlib-metadata" },
     { name = "jinja2" },
     { name = "jsonschema" },
-    { name = "openai", version = "1.90.0", source = { registry = "https://pypi.org/simple" }, marker = "extra == 'extra-8-skyagent-skyrl-train'" },
-    { name = "openai", version = "1.98.0", source = { registry = "https://pypi.org/simple" }, marker = "extra == 'extra-8-skyagent-verl' or extra != 'extra-8-skyagent-skyrl-train'" },
+    { name = "openai" },
     { name = "pydantic" },
     { name = "python-dotenv" },
     { name = "tiktoken" },
-    { name = "tokenizers" },
+    { name = "tokenizers", version = "0.21.4", source = { registry = "https://pypi.org/simple" }, marker = "extra == 'extra-8-skyagent-verl'" },
+    { name = "tokenizers", version = "0.22.2", source = { registry = "https://pypi.org/simple" }, marker = "extra == 'extra-8-skyagent-skyrl-train' or extra != 'extra-8-skyagent-verl'" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/3e/fc/02bfc7dcf6276fbbd5acf0ebcb188f824cf6d4ee8013d7150458c77c7047/litellm-1.74.15.post1.tar.gz", hash = "sha256:8c0f73f89f15603afebbc912cb30ba6f18439eb12249f16a37646752fb76825e", size = 9711380, upload-time = "2025-08-02T22:05:05.361Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/dd/e9/8941b7e72a187000561d932c0f2f2ed2b0fd080dfc33ba6e05961d45ca7d/litellm-1.84.0.tar.gz", hash = "sha256:b8ad0cbea11a5941b18d5af973017a340abd3d3ab41cb86e5401b970626d71a6", size = 15103206, upload-time = "2026-05-14T05:45:53.017Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/01/a6/77fa1bbf5e42eb596b06318b3f7e6af5d0f44028046d1d598c6a595d028f/litellm-1.84.0-py3-none-any.whl", hash = "sha256:2a58d6041e6aa27d1a28dc8d8828ab500fef1a00ef74ca65e60899035010c2f2", size = 16735062, upload-time = "2026-05-14T05:45:49.927Z" },
+]
 
 [[package]]
 name = "llguidance"
@@ -2473,8 +2538,8 @@ name = "loguru"
 version = "0.7.3"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "colorama", marker = "sys_platform == 'win32'" },
-    { name = "win32-setctime", marker = "sys_platform == 'win32'" },
+    { name = "colorama", marker = "sys_platform == 'win32' or (extra == 'extra-8-skyagent-skyrl-train' and extra == 'extra-8-skyagent-verl')" },
+    { name = "win32-setctime", marker = "sys_platform == 'win32' or (extra == 'extra-8-skyagent-skyrl-train' and extra == 'extra-8-skyagent-verl')" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/3a/05/a1dae3dffd1116099471c643b8924f5aa6524411dc6c63fdae648c4f1aca/loguru-0.7.3.tar.gz", hash = "sha256:19480589e77d47b8d85b2c827ad95d49bf31b0dcde16593892eb51dd18706eb6", size = 63559, upload-time = "2024-12-06T11:20:56.608Z" }
 wheels = [
@@ -2714,6 +2779,13 @@ wheels = [
 ]
 
 [package.optional-dependencies]
+audio = [
+    { name = "soundfile" },
+    { name = "soxr" },
+]
+image = [
+    { name = "opencv-python-headless" },
+]
 opencv = [
     { name = "opencv-python-headless" },
 ]
@@ -3065,7 +3137,7 @@ resolution-markers = [
     "platform_machine != 'aarch64' and sys_platform == 'linux'",
 ]
 dependencies = [
-    { name = "nvidia-cublas-cu12", version = "12.4.5.8", source = { registry = "https://pypi.org/simple" }, marker = "extra == 'extra-8-skyagent-verl'" },
+    { name = "nvidia-cublas-cu12", version = "12.4.5.8", source = { registry = "https://pypi.org/simple" }, marker = "(platform_machine != 'aarch64' and sys_platform == 'linux' and extra == 'extra-8-skyagent-verl') or (platform_machine == 'aarch64' and extra == 'extra-8-skyagent-skyrl-train' and extra == 'extra-8-skyagent-verl') or (sys_platform != 'linux' and extra == 'extra-8-skyagent-skyrl-train' and extra == 'extra-8-skyagent-verl')" },
 ]
 wheels = [
     { url = "https://files.pythonhosted.org/packages/9f/fd/713452cd72343f682b1c7b9321e23829f00b842ceaedcda96e742ea0b0b3/nvidia_cudnn_cu12-9.1.0.70-py3-none-manylinux2014_x86_64.whl", hash = "sha256:165764f44ef8c61fcdfdfdbe769d687e06374059fbb388b6c89ecb0e28793a6f", size = 664752741, upload-time = "2024-04-22T15:24:15.253Z" },
@@ -3080,7 +3152,7 @@ resolution-markers = [
     "platform_machine != 'aarch64' and sys_platform == 'linux'",
 ]
 dependencies = [
-    { name = "nvidia-cublas-cu12", version = "12.8.3.14", source = { registry = "https://pypi.org/simple" }, marker = "extra == 'extra-8-skyagent-skyrl-train'" },
+    { name = "nvidia-cublas-cu12", version = "12.8.3.14", source = { registry = "https://pypi.org/simple" }, marker = "(platform_machine != 'aarch64' and sys_platform == 'linux' and extra == 'extra-8-skyagent-skyrl-train') or (platform_machine == 'aarch64' and extra == 'extra-8-skyagent-skyrl-train' and extra == 'extra-8-skyagent-verl') or (sys_platform != 'linux' and extra == 'extra-8-skyagent-skyrl-train' and extra == 'extra-8-skyagent-verl')" },
 ]
 wheels = [
     { url = "https://files.pythonhosted.org/packages/c1/2e/ec5dda717eeb1de3afbbbb611ca556f9d6d057470759c6abd36d72f0063b/nvidia_cudnn_cu12-9.7.1.26-py3-none-manylinux_2_27_aarch64.whl", hash = "sha256:848a61d40ef3b32bd4e1fadb599f0cf04a4b942fbe5fb3be572ad75f9b8c53ef", size = 725862213, upload-time = "2025-02-06T22:14:57.169Z" },
@@ -3096,7 +3168,7 @@ resolution-markers = [
     "platform_machine != 'aarch64' and sys_platform == 'linux'",
 ]
 dependencies = [
-    { name = "nvidia-nvjitlink-cu12", version = "12.4.127", source = { registry = "https://pypi.org/simple" }, marker = "extra == 'extra-8-skyagent-verl'" },
+    { name = "nvidia-nvjitlink-cu12", version = "12.4.127", source = { registry = "https://pypi.org/simple" }, marker = "(platform_machine != 'aarch64' and sys_platform == 'linux' and extra == 'extra-8-skyagent-verl') or (platform_machine == 'aarch64' and extra == 'extra-8-skyagent-skyrl-train' and extra == 'extra-8-skyagent-verl') or (sys_platform != 'linux' and extra == 'extra-8-skyagent-skyrl-train' and extra == 'extra-8-skyagent-verl')" },
 ]
 wheels = [
     { url = "https://files.pythonhosted.org/packages/7a/8a/0e728f749baca3fbeffad762738276e5df60851958be7783af121a7221e7/nvidia_cufft_cu12-11.2.1.3-py3-none-manylinux2014_aarch64.whl", hash = "sha256:5dad8008fc7f92f5ddfa2101430917ce2ffacd86824914c82e28990ad7f00399", size = 211422548, upload-time = "2024-06-18T19:33:39.396Z" },
@@ -3112,7 +3184,7 @@ resolution-markers = [
     "platform_machine != 'aarch64' and sys_platform == 'linux'",
 ]
 dependencies = [
-    { name = "nvidia-nvjitlink-cu12", version = "12.8.61", source = { registry = "https://pypi.org/simple" }, marker = "extra == 'extra-8-skyagent-skyrl-train'" },
+    { name = "nvidia-nvjitlink-cu12", version = "12.8.61", source = { registry = "https://pypi.org/simple" }, marker = "(platform_machine != 'aarch64' and sys_platform == 'linux' and extra == 'extra-8-skyagent-skyrl-train') or (platform_machine == 'aarch64' and extra == 'extra-8-skyagent-skyrl-train' and extra == 'extra-8-skyagent-verl') or (sys_platform != 'linux' and extra == 'extra-8-skyagent-skyrl-train' and extra == 'extra-8-skyagent-verl')" },
 ]
 wheels = [
     { url = "https://files.pythonhosted.org/packages/72/95/6157cb45a49f5090a470de42353a22a0ed5b13077886dca891b4b0e350fe/nvidia_cufft_cu12-11.3.3.41-py3-none-manylinux2014_aarch64.manylinux_2_17_aarch64.whl", hash = "sha256:68509dcd7e3306e69d0e2d8a6d21c8b25ed62e6df8aac192ce752f17677398b5", size = 193108626, upload-time = "2025-01-23T17:55:49.192Z" },
@@ -3163,9 +3235,9 @@ resolution-markers = [
     "platform_machine != 'aarch64' and sys_platform == 'linux'",
 ]
 dependencies = [
-    { name = "nvidia-cublas-cu12", version = "12.4.5.8", source = { registry = "https://pypi.org/simple" }, marker = "extra == 'extra-8-skyagent-verl'" },
-    { name = "nvidia-cusparse-cu12", version = "12.3.1.170", source = { registry = "https://pypi.org/simple" }, marker = "extra == 'extra-8-skyagent-verl'" },
-    { name = "nvidia-nvjitlink-cu12", version = "12.4.127", source = { registry = "https://pypi.org/simple" }, marker = "extra == 'extra-8-skyagent-verl'" },
+    { name = "nvidia-cublas-cu12", version = "12.4.5.8", source = { registry = "https://pypi.org/simple" }, marker = "(platform_machine != 'aarch64' and sys_platform == 'linux' and extra == 'extra-8-skyagent-verl') or (platform_machine == 'aarch64' and extra == 'extra-8-skyagent-skyrl-train' and extra == 'extra-8-skyagent-verl') or (sys_platform != 'linux' and extra == 'extra-8-skyagent-skyrl-train' and extra == 'extra-8-skyagent-verl')" },
+    { name = "nvidia-cusparse-cu12", version = "12.3.1.170", source = { registry = "https://pypi.org/simple" }, marker = "(platform_machine != 'aarch64' and sys_platform == 'linux' and extra == 'extra-8-skyagent-verl') or (platform_machine == 'aarch64' and extra == 'extra-8-skyagent-skyrl-train' and extra == 'extra-8-skyagent-verl') or (sys_platform != 'linux' and extra == 'extra-8-skyagent-skyrl-train' and extra == 'extra-8-skyagent-verl')" },
+    { name = "nvidia-nvjitlink-cu12", version = "12.4.127", source = { registry = "https://pypi.org/simple" }, marker = "(platform_machine != 'aarch64' and sys_platform == 'linux' and extra == 'extra-8-skyagent-verl') or (platform_machine == 'aarch64' and extra == 'extra-8-skyagent-skyrl-train' and extra == 'extra-8-skyagent-verl') or (sys_platform != 'linux' and extra == 'extra-8-skyagent-skyrl-train' and extra == 'extra-8-skyagent-verl')" },
 ]
 wheels = [
     { url = "https://files.pythonhosted.org/packages/46/6b/a5c33cf16af09166845345275c34ad2190944bcc6026797a39f8e0a282e0/nvidia_cusolver_cu12-11.6.1.9-py3-none-manylinux2014_aarch64.whl", hash = "sha256:d338f155f174f90724bbde3758b7ac375a70ce8e706d70b018dd3375545fc84e", size = 127634111, upload-time = "2024-06-18T19:35:01.793Z" },
@@ -3181,9 +3253,9 @@ resolution-markers = [
     "platform_machine != 'aarch64' and sys_platform == 'linux'",
 ]
 dependencies = [
-    { name = "nvidia-cublas-cu12", version = "12.8.3.14", source = { registry = "https://pypi.org/simple" }, marker = "extra == 'extra-8-skyagent-skyrl-train'" },
-    { name = "nvidia-cusparse-cu12", version = "12.5.7.53", source = { registry = "https://pypi.org/simple" }, marker = "extra == 'extra-8-skyagent-skyrl-train'" },
-    { name = "nvidia-nvjitlink-cu12", version = "12.8.61", source = { registry = "https://pypi.org/simple" }, marker = "extra == 'extra-8-skyagent-skyrl-train'" },
+    { name = "nvidia-cublas-cu12", version = "12.8.3.14", source = { registry = "https://pypi.org/simple" }, marker = "(platform_machine != 'aarch64' and sys_platform == 'linux' and extra == 'extra-8-skyagent-skyrl-train') or (platform_machine == 'aarch64' and extra == 'extra-8-skyagent-skyrl-train' and extra == 'extra-8-skyagent-verl') or (sys_platform != 'linux' and extra == 'extra-8-skyagent-skyrl-train' and extra == 'extra-8-skyagent-verl')" },
+    { name = "nvidia-cusparse-cu12", version = "12.5.7.53", source = { registry = "https://pypi.org/simple" }, marker = "(platform_machine != 'aarch64' and sys_platform == 'linux' and extra == 'extra-8-skyagent-skyrl-train') or (platform_machine == 'aarch64' and extra == 'extra-8-skyagent-skyrl-train' and extra == 'extra-8-skyagent-verl') or (sys_platform != 'linux' and extra == 'extra-8-skyagent-skyrl-train' and extra == 'extra-8-skyagent-verl')" },
+    { name = "nvidia-nvjitlink-cu12", version = "12.8.61", source = { registry = "https://pypi.org/simple" }, marker = "(platform_machine != 'aarch64' and sys_platform == 'linux' and extra == 'extra-8-skyagent-skyrl-train') or (platform_machine == 'aarch64' and extra == 'extra-8-skyagent-skyrl-train' and extra == 'extra-8-skyagent-verl') or (sys_platform != 'linux' and extra == 'extra-8-skyagent-skyrl-train' and extra == 'extra-8-skyagent-verl')" },
 ]
 wheels = [
     { url = "https://files.pythonhosted.org/packages/8c/ce/4214a892e804b20bf66d04f04a473006fc2d3dac158160ef85f1bc906639/nvidia_cusolver_cu12-11.7.2.55-py3-none-manylinux_2_27_aarch64.whl", hash = "sha256:0fd9e98246f43c15bee5561147ad235dfdf2d037f5d07c9d41af3f7f72feb7cc", size = 260094827, upload-time = "2025-01-23T17:58:17.586Z" },
@@ -3199,7 +3271,7 @@ resolution-markers = [
     "platform_machine != 'aarch64' and sys_platform == 'linux'",
 ]
 dependencies = [
-    { name = "nvidia-nvjitlink-cu12", version = "12.4.127", source = { registry = "https://pypi.org/simple" }, marker = "extra == 'extra-8-skyagent-verl'" },
+    { name = "nvidia-nvjitlink-cu12", version = "12.4.127", source = { registry = "https://pypi.org/simple" }, marker = "(platform_machine != 'aarch64' and sys_platform == 'linux' and extra == 'extra-8-skyagent-verl') or (platform_machine == 'aarch64' and extra == 'extra-8-skyagent-skyrl-train' and extra == 'extra-8-skyagent-verl') or (sys_platform != 'linux' and extra == 'extra-8-skyagent-skyrl-train' and extra == 'extra-8-skyagent-verl')" },
 ]
 wheels = [
     { url = "https://files.pythonhosted.org/packages/96/a9/c0d2f83a53d40a4a41be14cea6a0bf9e668ffcf8b004bd65633f433050c0/nvidia_cusparse_cu12-12.3.1.170-py3-none-manylinux2014_aarch64.whl", hash = "sha256:9d32f62896231ebe0480efd8a7f702e143c98cfaa0e8a76df3386c1ba2b54df3", size = 207381987, upload-time = "2024-06-18T19:35:32.989Z" },
@@ -3215,7 +3287,7 @@ resolution-markers = [
     "platform_machine != 'aarch64' and sys_platform == 'linux'",
 ]
 dependencies = [
-    { name = "nvidia-nvjitlink-cu12", version = "12.8.61", source = { registry = "https://pypi.org/simple" }, marker = "extra == 'extra-8-skyagent-skyrl-train'" },
+    { name = "nvidia-nvjitlink-cu12", version = "12.8.61", source = { registry = "https://pypi.org/simple" }, marker = "(platform_machine != 'aarch64' and sys_platform == 'linux' and extra == 'extra-8-skyagent-skyrl-train') or (platform_machine == 'aarch64' and extra == 'extra-8-skyagent-skyrl-train' and extra == 'extra-8-skyagent-verl') or (sys_platform != 'linux' and extra == 'extra-8-skyagent-skyrl-train' and extra == 'extra-8-skyagent-verl')" },
 ]
 wheels = [
     { url = "https://files.pythonhosted.org/packages/2e/a2/313db0453087f5324a5900380ca2e57e050c8de76f407b5e11383dc762ae/nvidia_cusparse_cu12-12.5.7.53-py3-none-manylinux2014_aarch64.manylinux_2_17_aarch64.whl", hash = "sha256:d869c6146ca80f4305b62e02d924b4aaced936f8173e3cef536a67eed2a91af1", size = 291963692, upload-time = "2025-01-23T17:59:40.325Z" },
@@ -3348,41 +3420,8 @@ wheels = [
 
 [[package]]
 name = "openai"
-version = "1.90.0"
+version = "2.47.0"
 source = { registry = "https://pypi.org/simple" }
-resolution-markers = [
-    "platform_machine != 'aarch64' and sys_platform == 'linux'",
-    "sys_platform == 'darwin'",
-    "sys_platform != 'darwin' and sys_platform != 'linux'",
-    "platform_machine == 'aarch64' and sys_platform == 'linux'",
-]
-dependencies = [
-    { name = "anyio", marker = "extra == 'extra-8-skyagent-skyrl-train'" },
-    { name = "distro", marker = "extra == 'extra-8-skyagent-skyrl-train'" },
-    { name = "httpx", marker = "extra == 'extra-8-skyagent-skyrl-train'" },
-    { name = "jiter", marker = "extra == 'extra-8-skyagent-skyrl-train'" },
-    { name = "pydantic", marker = "extra == 'extra-8-skyagent-skyrl-train'" },
-    { name = "sniffio", marker = "extra == 'extra-8-skyagent-skyrl-train'" },
-    { name = "tqdm", marker = "extra == 'extra-8-skyagent-skyrl-train'" },
-    { name = "typing-extensions", marker = "extra == 'extra-8-skyagent-skyrl-train'" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/2d/30/0bdb712f5e25e823a76828136de6043f28bd69363886c417e05d7021420e/openai-1.90.0.tar.gz", hash = "sha256:9771982cdd5b6631af68c6a603da72ed44cd2caf73b49f717a72b71374bc565b", size = 471896, upload-time = "2025-06-20T20:22:18.349Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/bd/e3/0d7a2ee7ae7293e794e7945ffeda942ff5e3a94de24be27cc3eb5ba6c188/openai-1.90.0-py3-none-any.whl", hash = "sha256:e5dcb5498ea6b42fec47546d10f1bcc05fb854219a7d953a5ba766718b212a02", size = 734638, upload-time = "2025-06-20T20:22:16.211Z" },
-]
-
-[[package]]
-name = "openai"
-version = "1.98.0"
-source = { registry = "https://pypi.org/simple" }
-resolution-markers = [
-    "platform_machine == 'aarch64' and sys_platform == 'linux' and extra != 'extra-8-skyagent-skyrl-train' and extra == 'extra-8-skyagent-verl'",
-    "platform_machine != 'aarch64' and sys_platform == 'linux' and extra != 'extra-8-skyagent-skyrl-train' and extra == 'extra-8-skyagent-verl'",
-    "sys_platform == 'darwin' and extra != 'extra-8-skyagent-skyrl-train' and extra == 'extra-8-skyagent-verl'",
-    "sys_platform != 'darwin' and sys_platform != 'linux' and extra != 'extra-8-skyagent-skyrl-train' and extra == 'extra-8-skyagent-verl'",
-    "sys_platform == 'linux' and extra != 'extra-8-skyagent-skyrl-train' and extra != 'extra-8-skyagent-verl'",
-    "sys_platform != 'linux' and extra != 'extra-8-skyagent-skyrl-train' and extra != 'extra-8-skyagent-verl'",
-]
 dependencies = [
     { name = "anyio" },
     { name = "distro" },
@@ -3393,9 +3432,32 @@ dependencies = [
     { name = "tqdm" },
     { name = "typing-extensions" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/d8/9d/52eadb15c92802711d6b6cf00df3a6d0d18b588f4c5ba5ff210c6419fc03/openai-1.98.0.tar.gz", hash = "sha256:3ee0fcc50ae95267fd22bd1ad095ba5402098f3df2162592e68109999f685427", size = 496695, upload-time = "2025-07-30T12:48:03.701Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/bf/61/9aeef14de759306e85175126d3d6d56ee4f5072a9512c6c171d58d02a62d/openai-2.47.0.tar.gz", hash = "sha256:4e205548acd4304f235b86202269912e55bc88270b15d2a051fa2b53b90343a6", size = 1089906, upload-time = "2026-07-22T17:47:29.723Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/a8/fe/f64631075b3d63a613c0d8ab761d5941631a470f6fa87eaaee1aa2b4ec0c/openai-1.98.0-py3-none-any.whl", hash = "sha256:b99b794ef92196829120e2df37647722104772d2a74d08305df9ced5f26eae34", size = 767713, upload-time = "2025-07-30T12:48:01.264Z" },
+    { url = "https://files.pythonhosted.org/packages/41/69/26b032059273ad798d18fbcdbe369e871181841fd8bcb5caee32b7510039/openai-2.47.0-py3-none-any.whl", hash = "sha256:b3a1a7ad974092427ccb46d89f8852bdb67866680bcabeecc3ff5a3fdd71b15b", size = 1639987, upload-time = "2026-07-22T17:47:27.873Z" },
+]
+
+[[package]]
+name = "openai-harmony"
+version = "0.0.8"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "pydantic" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/3e/92/2d038d096f29179c7c9571b431f9e739f87a487121901725e23fe338dd9d/openai_harmony-0.0.8.tar.gz", hash = "sha256:6e43f98e6c242fa2de6f8ea12eab24af63fa2ed3e89c06341fb9d92632c5cbdf", size = 284777, upload-time = "2025-11-05T19:07:06.727Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/45/c6/2502f416d46be3ec08bb66d696cccffb57781a499e3ff2e4d7c174af4e8f/openai_harmony-0.0.8-cp38-abi3-macosx_11_0_arm64.whl", hash = "sha256:029ec25ca74abe48fdb58eb9fdd2a8c1618581fc33ce8e5653f8a1ffbfbd9326", size = 2627806, upload-time = "2025-11-05T19:06:57.063Z" },
+    { url = "https://files.pythonhosted.org/packages/d3/d2/ce6953ca87db9cae3e775024184da7d1c5cb88cead19a2d75b42f00a959c/openai_harmony-0.0.8-cp38-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:e4f709815924ec325b9a890e6ab2bbb0ceec8e319a4e257328eb752cf36b2efc", size = 2948463, upload-time = "2025-11-05T19:06:48.17Z" },
+    { url = "https://files.pythonhosted.org/packages/fa/4c/b553c9651662d6ce102ca7f3629d268b23df1abe5841e24bed81e8a8e949/openai_harmony-0.0.8-cp38-abi3-manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:5cfcfd963b50a41fc656c84d3440ca6eecdccd6c552158ce790b8f2e33dfb5a9", size = 2704083, upload-time = "2025-11-05T19:06:50.205Z" },
+    { url = "https://files.pythonhosted.org/packages/9b/af/4eec8f9ab9c27bcdb444460c72cf43011d176fc44c79d6e113094ca1e152/openai_harmony-0.0.8-cp38-abi3-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:0a3a16972aa1cee38ea958470cd04ac9a2d5ac38fdcf77ab686611246220c158", size = 2959765, upload-time = "2025-11-05T19:06:53.62Z" },
+    { url = "https://files.pythonhosted.org/packages/11/3c/33f3374e4624e0e776f6b13b73c45a7ead7f9c4529f8369ed5bfcaa30cac/openai_harmony-0.0.8-cp38-abi3-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl", hash = "sha256:b4d5cfa168e74d08f8ba6d58a7e49bc7daef4d58951ec69b66b0d56f4927a68d", size = 3427031, upload-time = "2025-11-05T19:06:51.829Z" },
+    { url = "https://files.pythonhosted.org/packages/25/3f/1a192b93bb47c6b44cd98ba8cc1d3d2a9308f1bb700c3017e6352da11bda/openai_harmony-0.0.8-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:c007d277218a50db8839e599ed78e0fffe5130f614c3f6d93ae257f282071a29", size = 2953260, upload-time = "2025-11-05T19:06:55.406Z" },
+    { url = "https://files.pythonhosted.org/packages/5b/f8/93b582cad3531797c3db7c2db5400fd841538ccddfd9f5e3df61be99a630/openai_harmony-0.0.8-cp38-abi3-musllinux_1_2_aarch64.whl", hash = "sha256:8565d4f5a0638da1bffde29832ed63c9e695c558611053add3b2dc0b56c92dbc", size = 3127044, upload-time = "2025-11-05T19:06:59.553Z" },
+    { url = "https://files.pythonhosted.org/packages/1d/10/4327dbf87f75ae813405fd9a9b4a5cde63d506ffed0a096a440a4cabd89c/openai_harmony-0.0.8-cp38-abi3-musllinux_1_2_armv7l.whl", hash = "sha256:cbaa3bda75ef0d8836e1f8cc84af62f971b1d756d740efc95c38c3e04c0bfde2", size = 2932931, upload-time = "2025-11-05T19:07:01.437Z" },
+    { url = "https://files.pythonhosted.org/packages/8a/c8/1774eec4f6f360ef57618fb8f52e3d3af245b2491bd0297513aa09eec04b/openai_harmony-0.0.8-cp38-abi3-musllinux_1_2_i686.whl", hash = "sha256:772922a9bd24e133950fad71eb1550836f415a88e8c77870e12d0c3bd688ddc2", size = 2996140, upload-time = "2025-11-05T19:07:03.438Z" },
+    { url = "https://files.pythonhosted.org/packages/60/c3/3d1e01e2dba517a91760e4a03e4f20ffc75039a6fe584d0e6f9b5c78fd15/openai_harmony-0.0.8-cp38-abi3-musllinux_1_2_x86_64.whl", hash = "sha256:007b0476a1f331f8130783f901f1da6f5a7057af1a4891f1b6a31dec364189b5", size = 3205080, upload-time = "2025-11-05T19:07:05.078Z" },
+    { url = "https://files.pythonhosted.org/packages/14/63/119de431572d7c70a7bf1037034a9be6ed0a7502a7498ba7302bca5b3242/openai_harmony-0.0.8-cp38-abi3-win32.whl", hash = "sha256:a9b5f893326b28d9e935ade14b4f655f5a840942473bc89b201c25f7a15af9cf", size = 2082457, upload-time = "2025-11-05T19:07:09.631Z" },
+    { url = "https://files.pythonhosted.org/packages/40/1f/c83cf5a206c263ee70448a5ae4264682555f4d0b5bed0d2cc6ca1108103d/openai_harmony-0.0.8-cp38-abi3-win_amd64.whl", hash = "sha256:39d44f0d8f466bd56698e7ead708bead3141e27b9b87e3ab7d5a6d0e4a869ee5", size = 2438369, upload-time = "2025-11-05T19:07:08.1Z" },
 ]
 
 [[package]]
@@ -3743,13 +3805,12 @@ dependencies = [
     { name = "lark" },
     { name = "nest-asyncio" },
     { name = "numpy" },
-    { name = "outlines-core" },
+    { name = "outlines-core", version = "0.1.26", source = { registry = "https://pypi.org/simple" } },
     { name = "pycountry" },
     { name = "pydantic" },
     { name = "referencing" },
     { name = "requests" },
-    { name = "torch", version = "2.6.0+cu124", source = { url = "https://download.pytorch.org/whl/cu124/torch-2.6.0%2Bcu124-cp312-cp312-linux_x86_64.whl" }, marker = "extra == 'extra-8-skyagent-verl'" },
-    { name = "torch", version = "2.7.0+cu128", source = { registry = "https://download.pytorch.org/whl/cu128" }, marker = "extra == 'extra-8-skyagent-skyrl-train'" },
+    { name = "torch", version = "2.6.0+cu124", source = { url = "https://download.pytorch.org/whl/cu124/torch-2.6.0%2Bcu124-cp312-cp312-linux_x86_64.whl" } },
     { name = "tqdm" },
     { name = "typing-extensions" },
 ]
@@ -3762,6 +3823,12 @@ wheels = [
 name = "outlines-core"
 version = "0.1.26"
 source = { registry = "https://pypi.org/simple" }
+resolution-markers = [
+    "platform_machine == 'aarch64' and sys_platform == 'linux'",
+    "platform_machine != 'aarch64' and sys_platform == 'linux'",
+    "sys_platform == 'darwin'",
+    "sys_platform != 'darwin' and sys_platform != 'linux'",
+]
 dependencies = [
     { name = "interegular" },
     { name = "jsonschema" },
@@ -3774,6 +3841,28 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/e2/1d/a36292b6198986bd9c3ff8c24355deb82ed5475403379ee40b5b5473e2e3/outlines_core-0.1.26-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:e86a1bb46adc5cbf6dfd7a7fe4105e0e2a4c6e041732a053126b41c521a1f223", size = 343201, upload-time = "2024-12-12T23:38:34.631Z" },
     { url = "https://files.pythonhosted.org/packages/08/63/5dd2b5a364412f674b6edcb59b0c21513bdb07cdcc7613b064c1a0660d01/outlines_core-0.1.26-cp312-cp312-win32.whl", hash = "sha256:19f462f6b00935708677ad27cb4df55e0e17f6ffe713ab750f5f2683b090f95d", size = 233970, upload-time = "2024-12-12T23:38:37.318Z" },
     { url = "https://files.pythonhosted.org/packages/a5/56/8adf0b7446d1e975c2314454813c59eb7b195889908a2932ed34148c113c/outlines_core-0.1.26-cp312-cp312-win_amd64.whl", hash = "sha256:9b36bff12779e58883747116893a17b3551bbd10865878b951b03a44d112229a", size = 243578, upload-time = "2024-12-12T23:38:39.964Z" },
+]
+
+[[package]]
+name = "outlines-core"
+version = "0.2.10"
+source = { registry = "https://pypi.org/simple" }
+resolution-markers = [
+    "platform_machine != 'aarch64' and sys_platform == 'linux'",
+    "sys_platform == 'darwin'",
+    "sys_platform != 'darwin' and sys_platform != 'linux'",
+    "platform_machine == 'aarch64' and sys_platform == 'linux'",
+]
+sdist = { url = "https://files.pythonhosted.org/packages/13/e2/de74a5fd00299215270a750f356ba7cb427ba5d3e495cab07cfc3110ca86/outlines_core-0.2.10.tar.gz", hash = "sha256:c9ee7be195ac18dda5acce41d8805c2fb550a4affd525414511662cfa7097dfe", size = 197140, upload-time = "2025-05-12T18:20:27.301Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/48/d6/95a02a498ee09cdc7fbb69b780ccdecaf3afd7033e8510b0f5e715d0b269/outlines_core-0.2.10-cp312-cp312-macosx_14_0_arm64.whl", hash = "sha256:32615f6fe4286d80699e9e6537eecbde387bf73d87751858f7a0693947381cdc", size = 1946785, upload-time = "2025-05-12T18:19:41.847Z" },
+    { url = "https://files.pythonhosted.org/packages/89/02/eb2bbcb0d9b860e0aedd7ea4c65361a15c2b8180f495ecda4361a8f8d218/outlines_core-0.2.10-cp312-cp312-macosx_14_0_x86_64.whl", hash = "sha256:db3e07c999ee17035114f20263c7200bf5bea0f643d2d026671eb5cfc2a9cf71", size = 2121685, upload-time = "2025-05-12T18:19:44.7Z" },
+    { url = "https://files.pythonhosted.org/packages/ea/61/e3acafae52fba50e9134e685c98e89dc84c4a80776b8991937308807cb6c/outlines_core-0.2.10-cp312-cp312-macosx_15_0_arm64.whl", hash = "sha256:e39847ab495ec9923dc1a59ccab04ef7888b5e066bc5856b5cb7fe98e9663f3d", size = 1945900, upload-time = "2025-05-12T18:19:46.359Z" },
+    { url = "https://files.pythonhosted.org/packages/07/25/be941feb461df2af76a4301b0c4dfc210a939a316f3219c4adc97371d135/outlines_core-0.2.10-cp312-cp312-macosx_15_0_x86_64.whl", hash = "sha256:f543f23b263c0b010860ab5ea760b2be566b604315e6a89499632758ca177a5d", size = 2117245, upload-time = "2025-05-12T18:19:48.069Z" },
+    { url = "https://files.pythonhosted.org/packages/c2/83/db792ce386d1c13d875a03d6ff5ba31612cfb558ecf5b945910db9505574/outlines_core-0.2.10-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:8666735ec367a06e26331e164a80a4c2936b349713ac05ab53650e2997a30891", size = 2273188, upload-time = "2025-05-12T18:19:49.759Z" },
+    { url = "https://files.pythonhosted.org/packages/86/82/dd116270e984f5a3936ec747404676cc4c306a92f4f0fcc077ac6be90024/outlines_core-0.2.10-cp312-cp312-manylinux_2_28_aarch64.whl", hash = "sha256:faf5b43181b1d033871364e74e9d348362c6a77b1d054d7af35e09fdfcff5b16", size = 2101406, upload-time = "2025-05-12T18:19:51.54Z" },
+    { url = "https://files.pythonhosted.org/packages/41/3a/63e9729dadd962e83dabbd52d600d9b8dd7154d92b6f351c10b514bd121f/outlines_core-0.2.10-cp312-cp312-win32.whl", hash = "sha256:b37e192de974fdbfe20332720a4a9cdda92719536dface60b48dc8eeeda24390", size = 1761638, upload-time = "2025-05-12T18:19:53.252Z" },
+    { url = "https://files.pythonhosted.org/packages/aa/e4/e6cb03a092043997babcee5d52d37b59254b265751bcf0f0e75aba11fc1d/outlines_core-0.2.10-cp312-cp312-win_amd64.whl", hash = "sha256:f895834da0a577120dcb8d979c12c0690fe912095413bf0070a73e9ff363b7bf", size = 2053750, upload-time = "2025-05-12T18:19:55.587Z" },
 ]
 
 [[package]]
@@ -3863,9 +3952,10 @@ dependencies = [
     { name = "pyyaml" },
     { name = "safetensors" },
     { name = "torch", version = "2.6.0+cu124", source = { url = "https://download.pytorch.org/whl/cu124/torch-2.6.0%2Bcu124-cp312-cp312-linux_x86_64.whl" }, marker = "extra == 'extra-8-skyagent-verl'" },
-    { name = "torch", version = "2.7.0+cu128", source = { registry = "https://download.pytorch.org/whl/cu128" }, marker = "extra == 'extra-8-skyagent-skyrl-train'" },
+    { name = "torch", version = "2.7.1+cu128", source = { registry = "https://download.pytorch.org/whl/cu128" }, marker = "extra == 'extra-8-skyagent-skyrl-train'" },
     { name = "tqdm" },
-    { name = "transformers" },
+    { name = "transformers", version = "4.54.1", source = { registry = "https://pypi.org/simple" }, marker = "extra == 'extra-8-skyagent-verl'" },
+    { name = "transformers", version = "4.57.6", source = { registry = "https://pypi.org/simple" }, marker = "extra == 'extra-8-skyagent-skyrl-train'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/62/60/65efe0186e3d4cf52c187f56daf6ebaac162f3166f4f5c8f65f72240658f/peft-0.17.0.tar.gz", hash = "sha256:cb647a931c8da434446d6a196c402b1c2d087b12e050e098215f906f12771f1e", size = 565680, upload-time = "2025-08-01T17:04:29.475Z" }
 wheels = [
@@ -4663,7 +4753,7 @@ name = "pyzmq"
 version = "27.0.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "cffi", marker = "implementation_name == 'pypy'" },
+    { name = "cffi", marker = "implementation_name == 'pypy' or (extra == 'extra-8-skyagent-skyrl-train' and extra == 'extra-8-skyagent-verl')" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/f1/06/50a4e9648b3e8b992bef8eb632e457307553a89d294103213cfd47b3da69/pyzmq-27.0.0.tar.gz", hash = "sha256:b1f08eeb9ce1510e6939b6e5dcd46a17765e2333daae78ecf4606808442e52cf", size = 280478, upload-time = "2025-06-13T14:09:07.087Z" }
 wheels = [
@@ -5112,6 +5202,24 @@ wheels = [
 ]
 
 [[package]]
+name = "setproctitle"
+version = "1.3.7"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/8d/48/49393a96a2eef1ab418b17475fb92b8fcfad83d099e678751b05472e69de/setproctitle-1.3.7.tar.gz", hash = "sha256:bc2bc917691c1537d5b9bca1468437176809c7e11e5694ca79a9ca12345dcb9e", size = 27002, upload-time = "2025-09-05T12:51:25.278Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/fb/f0/2dc88e842077719d7384d86cc47403e5102810492b33680e7dadcee64cd8/setproctitle-1.3.7-cp312-cp312-macosx_10_13_universal2.whl", hash = "sha256:2dc99aec591ab6126e636b11035a70991bc1ab7a261da428491a40b84376654e", size = 18049, upload-time = "2025-09-05T12:49:36.241Z" },
+    { url = "https://files.pythonhosted.org/packages/f0/b4/50940504466689cda65680c9e9a1e518e5750c10490639fa687489ac7013/setproctitle-1.3.7-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:cdd8aa571b7aa39840fdbea620e308a19691ff595c3a10231e9ee830339dd798", size = 13079, upload-time = "2025-09-05T12:49:38.088Z" },
+    { url = "https://files.pythonhosted.org/packages/d0/99/71630546b9395b095f4082be41165d1078204d1696c2d9baade3de3202d0/setproctitle-1.3.7-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl", hash = "sha256:2906b6c7959cdb75f46159bf0acd8cc9906cf1361c9e1ded0d065fe8f9039629", size = 32932, upload-time = "2025-09-05T12:49:39.271Z" },
+    { url = "https://files.pythonhosted.org/packages/50/22/cee06af4ffcfb0e8aba047bd44f5262e644199ae7527ae2c1f672b86495c/setproctitle-1.3.7-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:6915964a6dda07920a1159321dcd6d94fc7fc526f815ca08a8063aeca3c204f1", size = 33736, upload-time = "2025-09-05T12:49:40.565Z" },
+    { url = "https://files.pythonhosted.org/packages/5c/00/a5949a8bb06ef5e7df214fc393bb2fb6aedf0479b17214e57750dfdd0f24/setproctitle-1.3.7-cp312-cp312-manylinux2014_ppc64le.manylinux_2_17_ppc64le.manylinux_2_28_ppc64le.whl", hash = "sha256:cff72899861c765bd4021d1ff1c68d60edc129711a2fdba77f9cb69ef726a8b6", size = 35605, upload-time = "2025-09-05T12:49:42.362Z" },
+    { url = "https://files.pythonhosted.org/packages/b0/3a/50caca532a9343828e3bf5778c7a84d6c737a249b1796d50dd680290594d/setproctitle-1.3.7-cp312-cp312-musllinux_1_2_aarch64.whl", hash = "sha256:b7cb05bd446687ff816a3aaaf831047fc4c364feff7ada94a66024f1367b448c", size = 33143, upload-time = "2025-09-05T12:49:43.515Z" },
+    { url = "https://files.pythonhosted.org/packages/ca/14/b843a251296ce55e2e17c017d6b9f11ce0d3d070e9265de4ecad948b913d/setproctitle-1.3.7-cp312-cp312-musllinux_1_2_ppc64le.whl", hash = "sha256:3a57b9a00de8cae7e2a1f7b9f0c2ac7b69372159e16a7708aa2f38f9e5cc987a", size = 34434, upload-time = "2025-09-05T12:49:45.31Z" },
+    { url = "https://files.pythonhosted.org/packages/c8/b7/06145c238c0a6d2c4bc881f8be230bb9f36d2bf51aff7bddcb796d5eed67/setproctitle-1.3.7-cp312-cp312-musllinux_1_2_x86_64.whl", hash = "sha256:d8828b356114f6b308b04afe398ed93803d7fca4a955dd3abe84430e28d33739", size = 32795, upload-time = "2025-09-05T12:49:46.419Z" },
+    { url = "https://files.pythonhosted.org/packages/ef/dc/ef76a81fac9bf27b84ed23df19c1f67391a753eed6e3c2254ebcb5133f56/setproctitle-1.3.7-cp312-cp312-win32.whl", hash = "sha256:b0304f905efc845829ac2bc791ddebb976db2885f6171f4a3de678d7ee3f7c9f", size = 12552, upload-time = "2025-09-05T12:49:47.635Z" },
+    { url = "https://files.pythonhosted.org/packages/e2/5b/a9fe517912cd6e28cf43a212b80cb679ff179a91b623138a99796d7d18a0/setproctitle-1.3.7-cp312-cp312-win_amd64.whl", hash = "sha256:9888ceb4faea3116cf02a920ff00bfbc8cc899743e4b4ac914b03625bdc3c300", size = 13247, upload-time = "2025-09-05T12:49:49.16Z" },
+]
+
+[[package]]
 name = "setuptools"
 version = "79.0.1"
 source = { registry = "https://pypi.org/simple" }
@@ -5241,7 +5349,8 @@ dependencies = [
     { name = "sympy", version = "1.13.1", source = { registry = "https://pypi.org/simple" }, marker = "extra == 'extra-8-skyagent-verl'" },
     { name = "sympy", version = "1.14.0", source = { registry = "https://pypi.org/simple" }, marker = "extra == 'extra-8-skyagent-skyrl-train' or extra != 'extra-8-skyagent-verl'" },
     { name = "tabulate" },
-    { name = "transformers" },
+    { name = "transformers", version = "4.54.1", source = { registry = "https://pypi.org/simple" }, marker = "extra == 'extra-8-skyagent-verl'" },
+    { name = "transformers", version = "4.57.6", source = { registry = "https://pypi.org/simple" }, marker = "extra == 'extra-8-skyagent-skyrl-train' or extra != 'extra-8-skyagent-verl'" },
     { name = "wandb" },
     { name = "whatthepatch" },
 ]
@@ -5335,43 +5444,56 @@ dependencies = [
     { name = "loguru" },
     { name = "omegaconf" },
     { name = "peft" },
+    { name = "polars" },
     { name = "ray" },
     { name = "skyrl-gym" },
     { name = "tensorboard" },
     { name = "tensordict" },
     { name = "torchdata" },
     { name = "tqdm" },
-    { name = "transformers" },
+    { name = "transformers", version = "4.57.6", source = { registry = "https://pypi.org/simple" } },
     { name = "wandb" },
 ]
 
 [package.optional-dependencies]
 vllm = [
     { name = "flashinfer-python" },
-    { name = "torch", version = "2.7.0+cu128", source = { registry = "https://download.pytorch.org/whl/cu128" } },
-    { name = "torchvision", version = "0.22.0", source = { registry = "https://download.pytorch.org/whl/cu128" }, marker = "(platform_machine == 'aarch64' and sys_platform == 'linux' and extra == 'extra-8-skyagent-skyrl-train') or (platform_machine != 'aarch64' and extra == 'extra-8-skyagent-skyrl-train' and extra == 'extra-8-skyagent-verl') or (sys_platform != 'linux' and extra == 'extra-8-skyagent-skyrl-train' and extra == 'extra-8-skyagent-verl')" },
-    { name = "torchvision", version = "0.22.0+cu128", source = { registry = "https://download.pytorch.org/whl/cu128" }, marker = "(platform_machine != 'aarch64' and extra == 'extra-8-skyagent-skyrl-train') or (sys_platform != 'linux' and extra == 'extra-8-skyagent-skyrl-train') or (extra == 'extra-8-skyagent-skyrl-train' and extra == 'extra-8-skyagent-verl')" },
-    { name = "vllm", version = "0.9.2", source = { registry = "https://pypi.org/simple" } },
+    { name = "torch", version = "2.7.1+cu128", source = { registry = "https://download.pytorch.org/whl/cu128" } },
+    { name = "torchvision", version = "0.22.1", source = { registry = "https://download.pytorch.org/whl/cu128" }, marker = "(platform_machine == 'aarch64' and sys_platform == 'linux' and extra == 'extra-8-skyagent-skyrl-train') or (platform_machine != 'aarch64' and extra == 'extra-8-skyagent-skyrl-train' and extra == 'extra-8-skyagent-verl') or (sys_platform != 'linux' and extra == 'extra-8-skyagent-skyrl-train' and extra == 'extra-8-skyagent-verl')" },
+    { name = "torchvision", version = "0.22.1+cu128", source = { registry = "https://download.pytorch.org/whl/cu128" }, marker = "(platform_machine != 'aarch64' and extra == 'extra-8-skyagent-skyrl-train') or (sys_platform != 'linux' and extra == 'extra-8-skyagent-skyrl-train') or (extra == 'extra-8-skyagent-skyrl-train' and extra == 'extra-8-skyagent-verl')" },
+    { name = "vllm", version = "0.10.1.1", source = { registry = "https://pypi.org/simple" } },
 ]
 
 [package.metadata]
 requires-dist = [
     { name = "accelerate" },
     { name = "black", marker = "extra == 'dev'", specifier = "==24.10.0" },
-    { name = "datasets" },
+    { name = "datasets", specifier = ">=3.6.0" },
     { name = "debugpy", specifier = "==1.8.0" },
     { name = "deepspeed", marker = "extra == 'deepspeed'", specifier = "==0.16.5" },
+    { name = "fastapi", marker = "extra == 'dev'" },
     { name = "flash-attn", url = "https://github.com/Dao-AILab/flash-attention/releases/download/v2.8.0.post2/flash_attn-2.8.0.post2+cu12torch2.7cxx11abiFALSE-cp312-cp312-linux_x86_64.whl" },
-    { name = "flashinfer-python", marker = "extra == 'sglang'", url = "https://download.pytorch.org/whl/cu128/flashinfer/flashinfer_python-0.2.6.post1%2Bcu128torch2.7-cp39-abi3-linux_x86_64.whl" },
+    { name = "flashinfer-python", marker = "extra == 'flashrl' and extra != 'sglang' and extra != 'vllm'" },
+    { name = "flashinfer-python", marker = "extra == 'flashrl' and extra == 'sglang' and extra != 'vllm'", url = "https://download.pytorch.org/whl/cu128/flashinfer/flashinfer_python-0.2.6.post1%2Bcu128torch2.7-cp39-abi3-linux_x86_64.whl" },
+    { name = "flashinfer-python", marker = "extra == 'flashrl' and extra == 'vllm'", url = "https://download.pytorch.org/whl/cu128/flashinfer/flashinfer_python-0.2.6.post1%2Bcu128torch2.7-cp39-abi3-linux_x86_64.whl" },
+    { name = "flashinfer-python", marker = "extra == 'sglang' and extra == 'vllm'", url = "https://download.pytorch.org/whl/cu128/flashinfer/flashinfer_python-0.2.6.post1%2Bcu128torch2.7-cp39-abi3-linux_x86_64.whl" },
+    { name = "flashinfer-python", marker = "extra == 'sglang' and extra != 'vllm'", url = "https://download.pytorch.org/whl/cu128/flashinfer/flashinfer_python-0.2.6.post1%2Bcu128torch2.7-cp39-abi3-linux_x86_64.whl" },
     { name = "flashinfer-python", marker = "extra == 'vllm'", url = "https://download.pytorch.org/whl/cu128/flashinfer/flashinfer_python-0.2.6.post1%2Bcu128torch2.7-cp39-abi3-linux_x86_64.whl" },
     { name = "func-timeout" },
     { name = "hf-transfer" },
     { name = "hydra-core", specifier = "==1.3.2" },
     { name = "jaxtyping" },
+    { name = "litellm", marker = "extra == 'dev'" },
+    { name = "litellm", marker = "extra == 'miniswe'" },
+    { name = "litellm", extras = ["proxy"], marker = "extra == 'sandboxes'", specifier = ">=1.67.5" },
     { name = "loguru" },
+    { name = "mbridge", marker = "extra == 'mcore'", specifier = "==0.13.0" },
+    { name = "megatron-core", marker = "extra == 'mcore'", git = "https://github.com/NVIDIA/Megatron-LM.git?rev=core_r0.13.0" },
+    { name = "mini-swe-agent", marker = "extra == 'miniswe'", specifier = ">=1.12.0" },
     { name = "myst-parser", marker = "extra == 'docs'", specifier = ">=2.0.0" },
     { name = "omegaconf" },
     { name = "peft" },
+    { name = "polars" },
     { name = "pre-commit", marker = "extra == 'dev'" },
     { name = "pytest", marker = "extra == 'dev'", specifier = ">=6.2.5" },
     { name = "pytest-asyncio", marker = "extra == 'dev'" },
@@ -5386,17 +5508,22 @@ requires-dist = [
     { name = "sphinx-rtd-theme", marker = "extra == 'docs'", specifier = ">=2.0.0" },
     { name = "tensorboard" },
     { name = "tensordict" },
+    { name = "torch", marker = "extra == 'flashrl'", specifier = "==2.7.0", index = "https://download.pytorch.org/whl/cu128" },
     { name = "torch", marker = "extra == 'sglang'", specifier = "==2.7.1", index = "https://download.pytorch.org/whl/cu128" },
-    { name = "torch", marker = "extra == 'vllm'", specifier = "==2.7.0", index = "https://download.pytorch.org/whl/cu128" },
+    { name = "torch", marker = "extra == 'vllm'", specifier = "==2.7.1", index = "https://download.pytorch.org/whl/cu128" },
     { name = "torchdata" },
+    { name = "torchvision", marker = "extra == 'flashrl'", index = "https://download.pytorch.org/whl/cu128" },
     { name = "torchvision", marker = "extra == 'sglang'", index = "https://download.pytorch.org/whl/cu128" },
     { name = "torchvision", marker = "extra == 'vllm'", index = "https://download.pytorch.org/whl/cu128" },
     { name = "tqdm" },
+    { name = "transformer-engine", extras = ["pytorch"], marker = "extra == 'mcore'", specifier = "==2.5.0" },
     { name = "transformers", specifier = ">=4.51.0" },
-    { name = "vllm", marker = "extra == 'vllm'", specifier = "==0.9.2" },
+    { name = "uvicorn", marker = "extra == 'dev'" },
+    { name = "vllm", marker = "extra == 'flashrl'", url = "https://github.com/NovaSky-AI/SkyRL/releases/download/skyrl_train-v0.1.0/vllm-0.1.dev7509+gcc487699a.d20250821-cp312-cp312-linux_x86_64.whl" },
+    { name = "vllm", marker = "extra == 'vllm'", specifier = "==0.10.1.1" },
     { name = "wandb" },
 ]
-provides-extras = ["deepspeed", "dev", "docs", "vllm", "sglang"]
+provides-extras = ["deepspeed", "dev", "docs", "sandboxes", "vllm", "sglang", "mcore", "flashrl", "miniswe"]
 
 [[package]]
 name = "smmap"
@@ -5417,12 +5544,49 @@ wheels = [
 ]
 
 [[package]]
+name = "soundfile"
+version = "0.14.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "cffi" },
+    { name = "numpy" },
+    { name = "typing-extensions" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/d2/db/949331952a6fb1c5b12e9de80fd08747966c2039d1a61db4764fbd3981c2/soundfile-0.14.0.tar.gz", hash = "sha256:ba1c1a2d618bca5c406647c83b89f07cc8810fa506a50622a6993ba130c1de11", size = 47842, upload-time = "2026-06-06T08:58:47.869Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/b1/d1/5e338af9ca6ed0786cd5bb03f6d60de1c325728c1189014f3b59aae7403c/soundfile-0.14.0-py2.py3-none-any.whl", hash = "sha256:8ba81ae3a89fd5ab3bef8a8eb481fbbe794e806309675a89b4df48b8d31908a8", size = 26799, upload-time = "2026-06-06T08:58:33.269Z" },
+    { url = "https://files.pythonhosted.org/packages/7e/72/c6b21e58d3113596e7e8de0a08d6f1d95173492cfbca0a4db14148cbba2a/soundfile-0.14.0-py2.py3-none-macosx_10_9_x86_64.whl", hash = "sha256:19be05428da76ed61a4cad29b8e4bcf43a3e5c100089d2ec81dc961eed1b0dd4", size = 1144568, upload-time = "2026-06-06T08:58:35.231Z" },
+    { url = "https://files.pythonhosted.org/packages/63/7a/dfdd6f8c748988427119f75eb860a3cedd858d1aea1fe28f39ad8559ef22/soundfile-0.14.0-py2.py3-none-macosx_11_0_arm64.whl", hash = "sha256:d828d35a059626da52f1415b5faee610aeab393319cb3fc4a9aef47b619fc14c", size = 1103726, upload-time = "2026-06-06T08:58:37.948Z" },
+    { url = "https://files.pythonhosted.org/packages/4a/f8/fc39fad6f879633461d27394cd1ddaf1f769ffa0597dca35872f51b16461/soundfile-0.14.0-py2.py3-none-manylinux_2_28_aarch64.whl", hash = "sha256:e85724a90bc99a6e8062c0b4ddf725f53b2a3b70afd4da875e9d2cfc4e92f377", size = 1238050, upload-time = "2026-06-06T08:58:39.932Z" },
+    { url = "https://files.pythonhosted.org/packages/7b/a2/70fd4432b924684c372df8b0a45708c36c057ef3596c9eb53e0a806b980b/soundfile-0.14.0-py2.py3-none-manylinux_2_28_x86_64.whl", hash = "sha256:1e38bac1853412871318e82a1ba69a8be677619b56025bbfcccdb41b6cafe82d", size = 1315963, upload-time = "2026-06-06T08:58:41.716Z" },
+    { url = "https://files.pythonhosted.org/packages/d9/34/c9e80783d83eab739a9531fdee03675d53e0bf1b2ccb4bb3af5844675046/soundfile-0.14.0-py2.py3-none-win32.whl", hash = "sha256:0a6ae43c50c71b4e020cc55382925cb89451c1ed1a0c3d0f5d802da269226849", size = 902199, upload-time = "2026-06-06T08:58:43.289Z" },
+    { url = "https://files.pythonhosted.org/packages/ed/97/b39c18ac1df45e755ca22b8b00e872929da5d107998a207a5e4ac831bfda/soundfile-0.14.0-py2.py3-none-win_amd64.whl", hash = "sha256:299491d3499460fb1b74bb4bd78b57ffc2d243a5fafa7b6ec1b264875c78453e", size = 1021480, upload-time = "2026-06-06T08:58:45.016Z" },
+    { url = "https://files.pythonhosted.org/packages/f4/83/55c65e61cf457805ce2ec157c1c6ae17715d0851aa2374422de0538838ca/soundfile-0.14.0-py2.py3-none-win_arm64.whl", hash = "sha256:e090704718e124e7c844695236f1fce8d18a5e761eaf7c82dfcd124620805f98", size = 888858, upload-time = "2026-06-06T08:58:46.593Z" },
+]
+
+[[package]]
 name = "soupsieve"
 version = "2.7"
 source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/3f/f4/4a80cd6ef364b2e8b65b15816a843c0980f7a5a2b4dc701fc574952aa19f/soupsieve-2.7.tar.gz", hash = "sha256:ad282f9b6926286d2ead4750552c8a6142bc4c783fd66b0293547c8fe6ae126a", size = 103418, upload-time = "2025-04-20T18:50:08.518Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/e7/9c/0e6afc12c269578be5c0c1c9f4b49a8d32770a080260c333ac04cc1c832d/soupsieve-2.7-py3-none-any.whl", hash = "sha256:6e60cc5c1ffaf1cebcc12e8188320b72071e922c2e897f737cadce79ad5d30c4", size = 36677, upload-time = "2025-04-20T18:50:07.196Z" },
+]
+
+[[package]]
+name = "soxr"
+version = "1.1.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "numpy" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/ed/11/27cebce4a108f77afea7c80545115536b45e3f11ebfb914f638fdd9ba847/soxr-1.1.0.tar.gz", hash = "sha256:9f228ae21c78fa9359ca98d8a5e8e91f30639e438e574133dace62c5b5309e44", size = 173067, upload-time = "2026-05-03T00:15:18.214Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/06/8a/f3da7973b5f1b05d2d7e94d5376b881dcbc05297900cae6c3d33d95b209b/soxr-1.1.0-cp312-abi3-macosx_10_14_x86_64.whl", hash = "sha256:e0e09fa633ce2e67df08b298afced4d184f6e753fc330f241022250f1d0d61da", size = 204124, upload-time = "2026-05-03T00:14:54.505Z" },
+    { url = "https://files.pythonhosted.org/packages/03/dc/200013a74641f8774664bbcd2346c695c05c2e300ea792adcb40a293eed0/soxr-1.1.0-cp312-abi3-macosx_11_0_arm64.whl", hash = "sha256:d6a7ad82b8d5f3fcc04b1d2ca055562b96af571e1d4fa7c6c61d0fb509ac43b4", size = 165457, upload-time = "2026-05-03T00:14:56.007Z" },
+    { url = "https://files.pythonhosted.org/packages/88/2b/2e5eba817a762a2ec589ff165b8bc5955b25a0ad140045f7cd8e45410543/soxr-1.1.0-cp312-abi3-manylinux_2_26_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:bf98c0d7b7d5ef5bf072fee8d3020e8b664f2d195933ea7bc5089267c2e22a06", size = 206529, upload-time = "2026-05-03T00:14:57.646Z" },
+    { url = "https://files.pythonhosted.org/packages/5c/f1/0e55195893228609c9a08c3b13b7a83a46c3a992cd00d3304f0f320cfb07/soxr-1.1.0-cp312-abi3-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:3b033078e86f3c4a658e5697fac8995764fad9e799563616b630136b613167f1", size = 240413, upload-time = "2026-05-03T00:14:59.363Z" },
+    { url = "https://files.pythonhosted.org/packages/b0/4d/621e4150e4815246ad552d215a8a294a90143fedd19ee442cf82d3b3abc8/soxr-1.1.0-cp312-abi3-win_amd64.whl", hash = "sha256:6ae2a174bffea94e8ead857dad85999d3f49f091774dbad5b046c0417d7092f4", size = 174357, upload-time = "2026-05-03T00:15:00.724Z" },
 ]
 
 [[package]]
@@ -5655,7 +5819,7 @@ dependencies = [
     { name = "packaging" },
     { name = "pyvers" },
     { name = "torch", version = "2.6.0+cu124", source = { url = "https://download.pytorch.org/whl/cu124/torch-2.6.0%2Bcu124-cp312-cp312-linux_x86_64.whl" }, marker = "extra == 'extra-8-skyagent-verl'" },
-    { name = "torch", version = "2.7.0+cu128", source = { registry = "https://download.pytorch.org/whl/cu128" }, marker = "extra == 'extra-8-skyagent-skyrl-train'" },
+    { name = "torch", version = "2.7.1+cu128", source = { registry = "https://download.pytorch.org/whl/cu128" }, marker = "extra == 'extra-8-skyagent-skyrl-train'" },
 ]
 wheels = [
     { url = "https://files.pythonhosted.org/packages/cc/dd/2e1d044a5a7901fb2a94686299e7291482f6c5623149edb777be887a0658/tensordict-0.9.1-cp312-cp312-macosx_14_0_arm64.whl", hash = "sha256:46f59e9db37af740a3cafb08ff98df6f252ffaa0598a9354d2546dcbb0e97d92", size = 739949, upload-time = "2025-07-14T12:52:15.177Z" },
@@ -5709,8 +5873,14 @@ wheels = [
 name = "tokenizers"
 version = "0.21.4"
 source = { registry = "https://pypi.org/simple" }
+resolution-markers = [
+    "platform_machine == 'aarch64' and sys_platform == 'linux'",
+    "platform_machine != 'aarch64' and sys_platform == 'linux'",
+    "sys_platform == 'darwin'",
+    "sys_platform != 'darwin' and sys_platform != 'linux'",
+]
 dependencies = [
-    { name = "huggingface-hub" },
+    { name = "huggingface-hub", marker = "extra == 'extra-8-skyagent-verl'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/c2/2f/402986d0823f8d7ca139d969af2917fefaa9b947d1fb32f6168c509f2492/tokenizers-0.21.4.tar.gz", hash = "sha256:fa23f85fbc9a02ec5c6978da172cdcbac23498c3ca9f3645c5c68740ac007880", size = 351253, upload-time = "2025-07-28T15:48:54.325Z" }
 wheels = [
@@ -5728,6 +5898,40 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/b7/0a/42348c995c67e2e6e5c89ffb9cfd68507cbaeb84ff39c49ee6e0a6dd0fd2/tokenizers-0.21.4-cp39-abi3-musllinux_1_2_x86_64.whl", hash = "sha256:c212aa4e45ec0bb5274b16b6f31dd3f1c41944025c2358faaa5782c754e84c24", size = 9461980, upload-time = "2025-07-28T15:48:52.325Z" },
     { url = "https://files.pythonhosted.org/packages/3d/d3/dacccd834404cd71b5c334882f3ba40331ad2120e69ded32cf5fda9a7436/tokenizers-0.21.4-cp39-abi3-win32.whl", hash = "sha256:6c42a930bc5f4c47f4ea775c91de47d27910881902b0f20e4990ebe045a415d0", size = 2329871, upload-time = "2025-07-28T15:48:56.841Z" },
     { url = "https://files.pythonhosted.org/packages/41/f2/fd673d979185f5dcbac4be7d09461cbb99751554ffb6718d0013af8604cb/tokenizers-0.21.4-cp39-abi3-win_amd64.whl", hash = "sha256:475d807a5c3eb72c59ad9b5fcdb254f6e17f53dfcbb9903233b0dfa9c943b597", size = 2507568, upload-time = "2025-07-28T15:48:55.456Z" },
+]
+
+[[package]]
+name = "tokenizers"
+version = "0.22.2"
+source = { registry = "https://pypi.org/simple" }
+resolution-markers = [
+    "platform_machine != 'aarch64' and sys_platform == 'linux' and extra == 'extra-8-skyagent-skyrl-train' and extra != 'extra-8-skyagent-verl'",
+    "sys_platform == 'darwin' and extra == 'extra-8-skyagent-skyrl-train' and extra != 'extra-8-skyagent-verl'",
+    "sys_platform != 'darwin' and sys_platform != 'linux' and extra == 'extra-8-skyagent-skyrl-train' and extra != 'extra-8-skyagent-verl'",
+    "platform_machine == 'aarch64' and sys_platform == 'linux' and extra == 'extra-8-skyagent-skyrl-train' and extra != 'extra-8-skyagent-verl'",
+    "sys_platform == 'linux' and extra != 'extra-8-skyagent-skyrl-train' and extra != 'extra-8-skyagent-verl'",
+    "sys_platform != 'linux' and extra != 'extra-8-skyagent-skyrl-train' and extra != 'extra-8-skyagent-verl'",
+]
+dependencies = [
+    { name = "huggingface-hub", marker = "extra == 'extra-8-skyagent-skyrl-train' or extra != 'extra-8-skyagent-verl'" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/73/6f/f80cfef4a312e1fb34baf7d85c72d4411afde10978d4657f8cdd811d3ccc/tokenizers-0.22.2.tar.gz", hash = "sha256:473b83b915e547aa366d1eee11806deaf419e17be16310ac0a14077f1e28f917", size = 372115, upload-time = "2026-01-05T10:45:15.988Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/92/97/5dbfabf04c7e348e655e907ed27913e03db0923abb5dfdd120d7b25630e1/tokenizers-0.22.2-cp39-abi3-macosx_10_12_x86_64.whl", hash = "sha256:544dd704ae7238755d790de45ba8da072e9af3eea688f698b137915ae959281c", size = 3100275, upload-time = "2026-01-05T10:41:02.158Z" },
+    { url = "https://files.pythonhosted.org/packages/2e/47/174dca0502ef88b28f1c9e06b73ce33500eedfac7a7692108aec220464e7/tokenizers-0.22.2-cp39-abi3-macosx_11_0_arm64.whl", hash = "sha256:1e418a55456beedca4621dbab65a318981467a2b188e982a23e117f115ce5001", size = 2981472, upload-time = "2026-01-05T10:41:00.276Z" },
+    { url = "https://files.pythonhosted.org/packages/d6/84/7990e799f1309a8b87af6b948f31edaa12a3ed22d11b352eaf4f4b2e5753/tokenizers-0.22.2-cp39-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:2249487018adec45d6e3554c71d46eb39fa8ea67156c640f7513eb26f318cec7", size = 3290736, upload-time = "2026-01-05T10:40:32.165Z" },
+    { url = "https://files.pythonhosted.org/packages/78/59/09d0d9ba94dcd5f4f1368d4858d24546b4bdc0231c2354aa31d6199f0399/tokenizers-0.22.2-cp39-abi3-manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:25b85325d0815e86e0bac263506dd114578953b7b53d7de09a6485e4a160a7dd", size = 3168835, upload-time = "2026-01-05T10:40:38.847Z" },
+    { url = "https://files.pythonhosted.org/packages/47/50/b3ebb4243e7160bda8d34b731e54dd8ab8b133e50775872e7a434e524c28/tokenizers-0.22.2-cp39-abi3-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:bfb88f22a209ff7b40a576d5324bf8286b519d7358663db21d6246fb17eea2d5", size = 3521673, upload-time = "2026-01-05T10:40:56.614Z" },
+    { url = "https://files.pythonhosted.org/packages/e0/fa/89f4cb9e08df770b57adb96f8cbb7e22695a4cb6c2bd5f0c4f0ebcf33b66/tokenizers-0.22.2-cp39-abi3-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl", hash = "sha256:1c774b1276f71e1ef716e5486f21e76333464f47bece56bbd554485982a9e03e", size = 3724818, upload-time = "2026-01-05T10:40:44.507Z" },
+    { url = "https://files.pythonhosted.org/packages/64/04/ca2363f0bfbe3b3d36e95bf67e56a4c88c8e3362b658e616d1ac185d47f2/tokenizers-0.22.2-cp39-abi3-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:df6c4265b289083bf710dff49bc51ef252f9d5be33a45ee2bed151114a56207b", size = 3379195, upload-time = "2026-01-05T10:40:51.139Z" },
+    { url = "https://files.pythonhosted.org/packages/2e/76/932be4b50ef6ccedf9d3c6639b056a967a86258c6d9200643f01269211ca/tokenizers-0.22.2-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:369cc9fc8cc10cb24143873a0d95438bb8ee257bb80c71989e3ee290e8d72c67", size = 3274982, upload-time = "2026-01-05T10:40:58.331Z" },
+    { url = "https://files.pythonhosted.org/packages/1d/28/5f9f5a4cc211b69e89420980e483831bcc29dade307955cc9dc858a40f01/tokenizers-0.22.2-cp39-abi3-musllinux_1_2_aarch64.whl", hash = "sha256:29c30b83d8dcd061078b05ae0cb94d3c710555fbb44861139f9f83dcca3dc3e4", size = 9478245, upload-time = "2026-01-05T10:41:04.053Z" },
+    { url = "https://files.pythonhosted.org/packages/6c/fb/66e2da4704d6aadebf8cb39f1d6d1957df667ab24cff2326b77cda0dcb85/tokenizers-0.22.2-cp39-abi3-musllinux_1_2_armv7l.whl", hash = "sha256:37ae80a28c1d3265bb1f22464c856bd23c02a05bb211e56d0c5301a435be6c1a", size = 9560069, upload-time = "2026-01-05T10:45:10.673Z" },
+    { url = "https://files.pythonhosted.org/packages/16/04/fed398b05caa87ce9b1a1bb5166645e38196081b225059a6edaff6440fac/tokenizers-0.22.2-cp39-abi3-musllinux_1_2_i686.whl", hash = "sha256:791135ee325f2336f498590eb2f11dc5c295232f288e75c99a36c5dbce63088a", size = 9899263, upload-time = "2026-01-05T10:45:12.559Z" },
+    { url = "https://files.pythonhosted.org/packages/05/a1/d62dfe7376beaaf1394917e0f8e93ee5f67fea8fcf4107501db35996586b/tokenizers-0.22.2-cp39-abi3-musllinux_1_2_x86_64.whl", hash = "sha256:38337540fbbddff8e999d59970f3c6f35a82de10053206a7562f1ea02d046fa5", size = 10033429, upload-time = "2026-01-05T10:45:14.333Z" },
+    { url = "https://files.pythonhosted.org/packages/fd/18/a545c4ea42af3df6effd7d13d250ba77a0a86fb20393143bbb9a92e434d4/tokenizers-0.22.2-cp39-abi3-win32.whl", hash = "sha256:a6bf3f88c554a2b653af81f3204491c818ae2ac6fbc09e76ef4773351292bc92", size = 2502363, upload-time = "2026-01-05T10:45:20.593Z" },
+    { url = "https://files.pythonhosted.org/packages/65/71/0670843133a43d43070abeb1949abfdef12a86d490bea9cd9e18e37c5ff7/tokenizers-0.22.2-cp39-abi3-win_amd64.whl", hash = "sha256:c9ea31edff2968b44a88f97d784c2f16dc0729b8b143ed004699ebca91f05c48", size = 2747786, upload-time = "2026-01-05T10:45:18.411Z" },
+    { url = "https://files.pythonhosted.org/packages/72/f4/0de46cfa12cdcbcd464cc59fde36912af405696f687e53a091fb432f694c/tokenizers-0.22.2-cp39-abi3-win_arm64.whl", hash = "sha256:9ce725d22864a1e965217204946f830c37876eee3b2ba6fc6255e8e903d5fcbc", size = 2612133, upload-time = "2026-01-05T10:45:17.232Z" },
 ]
 
 [[package]]
@@ -5815,7 +6019,7 @@ provides-extras = ["opt-einsum", "optree"]
 
 [[package]]
 name = "torch"
-version = "2.7.0+cu128"
+version = "2.7.1+cu128"
 source = { registry = "https://download.pytorch.org/whl/cu128" }
 resolution-markers = [
     "platform_machine != 'aarch64' and sys_platform == 'linux'",
@@ -5844,13 +6048,13 @@ dependencies = [
     { name = "nvidia-nvtx-cu12", version = "12.8.55", source = { registry = "https://pypi.org/simple" }, marker = "(platform_machine == 'x86_64' and sys_platform == 'linux' and extra == 'extra-8-skyagent-skyrl-train') or (platform_machine != 'x86_64' and extra == 'extra-8-skyagent-skyrl-train' and extra == 'extra-8-skyagent-verl') or (sys_platform != 'linux' and extra == 'extra-8-skyagent-skyrl-train' and extra == 'extra-8-skyagent-verl')" },
     { name = "setuptools", version = "79.0.1", source = { registry = "https://pypi.org/simple" }, marker = "extra == 'extra-8-skyagent-skyrl-train'" },
     { name = "sympy", version = "1.14.0", source = { registry = "https://pypi.org/simple" }, marker = "extra == 'extra-8-skyagent-skyrl-train'" },
-    { name = "triton", version = "3.3.0", source = { registry = "https://pypi.org/simple" }, marker = "(sys_platform == 'linux' and extra == 'extra-8-skyagent-skyrl-train') or (extra == 'extra-8-skyagent-skyrl-train' and extra == 'extra-8-skyagent-verl')" },
+    { name = "triton", version = "3.3.1", source = { registry = "https://pypi.org/simple" }, marker = "(sys_platform == 'linux' and extra == 'extra-8-skyagent-skyrl-train') or (extra == 'extra-8-skyagent-skyrl-train' and extra == 'extra-8-skyagent-verl')" },
     { name = "typing-extensions", marker = "extra == 'extra-8-skyagent-skyrl-train'" },
 ]
 wheels = [
-    { url = "https://download.pytorch.org/whl/cu128/torch-2.7.0%2Bcu128-cp312-cp312-manylinux_2_28_aarch64.whl", hash = "sha256:6bba7dca5d9a729f1e8e9befb98055498e551efaf5ed034824c168b560afc1ac" },
-    { url = "https://download.pytorch.org/whl/cu128/torch-2.7.0%2Bcu128-cp312-cp312-manylinux_2_28_x86_64.whl", hash = "sha256:7c0f08d1c44a02abad389373dddfce75904b969a410be2f4e5109483dd3dc0ce" },
-    { url = "https://download.pytorch.org/whl/cu128/torch-2.7.0%2Bcu128-cp312-cp312-win_amd64.whl", hash = "sha256:1704e5dd66c9221e4e8b6ae2d80cbf54e129571e643f5fa9ca78cc6d2096403a" },
+    { url = "https://download-r2.pytorch.org/whl/cu128/torch-2.7.1%2Bcu128-cp312-cp312-manylinux_2_28_aarch64.whl", hash = "sha256:268e54db9f0bc2b7b9eb089852d3e592c2dea2facc3db494100c3d3b796549fa", upload-time = "2025-06-03T18:31:20Z" },
+    { url = "https://download-r2.pytorch.org/whl/cu128/torch-2.7.1%2Bcu128-cp312-cp312-manylinux_2_28_x86_64.whl", hash = "sha256:0b64f7d0a6f2a739ed052ba959f7b67c677028c9566ce51997f9f90fe573ddaa", upload-time = "2025-06-03T18:31:26Z" },
+    { url = "https://download-r2.pytorch.org/whl/cu128/torch-2.7.1%2Bcu128-cp312-cp312-win_amd64.whl", hash = "sha256:2bb8c05d48ba815b316879a18195d53a6472a03e297d971e916753f8e1053d30", upload-time = "2025-06-03T18:31:46Z" },
 ]
 
 [[package]]
@@ -5875,7 +6079,7 @@ wheels = [
 
 [[package]]
 name = "torchaudio"
-version = "2.7.0"
+version = "2.7.1"
 source = { registry = "https://pypi.org/simple" }
 resolution-markers = [
     "platform_machine != 'aarch64' and sys_platform == 'linux'",
@@ -5884,13 +6088,13 @@ resolution-markers = [
     "platform_machine == 'aarch64' and sys_platform == 'linux'",
 ]
 dependencies = [
-    { name = "torch", version = "2.7.0+cu128", source = { registry = "https://download.pytorch.org/whl/cu128" } },
+    { name = "torch", version = "2.7.1+cu128", source = { registry = "https://download.pytorch.org/whl/cu128" } },
 ]
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/dd/b9/66dd7c4e16e8e6dcc52b4702ba7bbace589972b3597627d39d9dc3aa5fdd/torchaudio-2.7.0-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:65b4fc9b7f28367f918b02ae4db4290457bc4fdd160f22b7d684e93ab8dcb956", size = 1846733, upload-time = "2025-04-23T14:47:01.068Z" },
-    { url = "https://files.pythonhosted.org/packages/47/48/850edf788c674494a7e148eee6f5563cae34c9a3e3e0962dcfce66c1dae7/torchaudio-2.7.0-cp312-cp312-manylinux_2_28_aarch64.whl", hash = "sha256:33004ed47f18f00044c97ee8cd9e3f5e1c2e26ef23d4f72b5f1ae33e6182587b", size = 1686687, upload-time = "2025-04-23T14:47:02.136Z" },
-    { url = "https://files.pythonhosted.org/packages/78/98/ec8c7aba67b44cdc59717d4b43d02023ded5da180d33c6469d20bf5bfa3c/torchaudio-2.7.0-cp312-cp312-manylinux_2_28_x86_64.whl", hash = "sha256:a6f03494075bcdd62e7fade7baf50a0ef107aa809d02b5e1786391adced451a3", size = 3454437, upload-time = "2025-04-23T14:46:57.557Z" },
-    { url = "https://files.pythonhosted.org/packages/5e/23/b73163ac06e5a724375df61a5b6c853861a825fe98e64388f277514153dd/torchaudio-2.7.0-cp312-cp312-win_amd64.whl", hash = "sha256:275931c8a38ff84b5692df990506b41f18d0a0706574d96bc8456ad9e5fa85c8", size = 2493451, upload-time = "2025-04-23T14:46:46.456Z" },
+    { url = "https://files.pythonhosted.org/packages/0b/d1/eb8bc3b3502dddb1b789567b7b19668b1d32817266887b9f381494cfe463/torchaudio-2.7.1-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:9306dcfc4586cebd7647a93fe9a448e791c4f83934da616b9433b75597a1f978", size = 1846897, upload-time = "2025-06-04T17:44:07.79Z" },
+    { url = "https://files.pythonhosted.org/packages/62/7d/6c15f15d3edc5271abc808f70713644b50f0f7bfb85a09dba8b5735fbad3/torchaudio-2.7.1-cp312-cp312-manylinux_2_28_aarch64.whl", hash = "sha256:d66bd76b226fdd4135c97650e1b7eb63fb7659b4ed0e3a778898e41dbba21b61", size = 1686680, upload-time = "2025-06-04T17:43:58.986Z" },
+    { url = "https://files.pythonhosted.org/packages/48/65/0f46ba74cdc67ea9a8c37c8acfb5194d81639e481e85903c076bcd97188c/torchaudio-2.7.1-cp312-cp312-manylinux_2_28_x86_64.whl", hash = "sha256:9cbcdaab77ad9a73711acffee58f4eebc8a0685289a938a3fa6f660af9489aee", size = 3506966, upload-time = "2025-06-04T17:44:06.537Z" },
+    { url = "https://files.pythonhosted.org/packages/52/29/06f887baf22cbba85ae331b71b110b115bf11b3968f5914a50c17dde5ab7/torchaudio-2.7.1-cp312-cp312-win_amd64.whl", hash = "sha256:9cfb8f6ace8e01e2b89de74eb893ba5ce936b88b415383605b0a4d974009dec7", size = 2484265, upload-time = "2025-06-04T17:44:00.277Z" },
 ]
 
 [[package]]
@@ -5900,7 +6104,7 @@ source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "requests" },
     { name = "torch", version = "2.6.0+cu124", source = { url = "https://download.pytorch.org/whl/cu124/torch-2.6.0%2Bcu124-cp312-cp312-linux_x86_64.whl" }, marker = "extra == 'extra-8-skyagent-verl'" },
-    { name = "torch", version = "2.7.0+cu128", source = { registry = "https://download.pytorch.org/whl/cu128" }, marker = "extra == 'extra-8-skyagent-skyrl-train'" },
+    { name = "torch", version = "2.7.1+cu128", source = { registry = "https://download.pytorch.org/whl/cu128" }, marker = "extra == 'extra-8-skyagent-skyrl-train'" },
     { name = "urllib3" },
 ]
 wheels = [
@@ -5938,7 +6142,7 @@ provides-extras = ["gdown", "scipy"]
 
 [[package]]
 name = "torchvision"
-version = "0.22.0"
+version = "0.22.1"
 source = { registry = "https://download.pytorch.org/whl/cu128" }
 resolution-markers = [
     "platform_machine == 'aarch64' and sys_platform == 'linux'",
@@ -5946,15 +6150,15 @@ resolution-markers = [
 dependencies = [
     { name = "numpy", marker = "platform_machine == 'aarch64' and sys_platform == 'linux'" },
     { name = "pillow", marker = "platform_machine == 'aarch64' and sys_platform == 'linux'" },
-    { name = "torch", version = "2.7.0+cu128", source = { registry = "https://download.pytorch.org/whl/cu128" }, marker = "platform_machine == 'aarch64' and sys_platform == 'linux'" },
+    { name = "torch", version = "2.7.1+cu128", source = { registry = "https://download.pytorch.org/whl/cu128" }, marker = "platform_machine == 'aarch64' and sys_platform == 'linux'" },
 ]
 wheels = [
-    { url = "https://download.pytorch.org/whl/cu128/torchvision-0.22.0-cp312-cp312-manylinux_2_28_aarch64.whl", hash = "sha256:6e9752b48c1cdd7f6428bcd30c3d198b30ecea348d16afb651f95035e5252506" },
+    { url = "https://download-r2.pytorch.org/whl/cu128/torchvision-0.22.1-cp312-cp312-manylinux_2_28_aarch64.whl", hash = "sha256:2ad7fe412b821333fc05b4046263d77c14ba86f3965366adbada8dc397ea45b4", upload-time = "2025-06-03T18:37:29Z" },
 ]
 
 [[package]]
 name = "torchvision"
-version = "0.22.0+cu128"
+version = "0.22.1+cu128"
 source = { registry = "https://download.pytorch.org/whl/cu128" }
 resolution-markers = [
     "platform_machine != 'aarch64' and sys_platform == 'linux'",
@@ -5964,11 +6168,11 @@ resolution-markers = [
 dependencies = [
     { name = "numpy", marker = "platform_machine != 'aarch64' or sys_platform != 'linux'" },
     { name = "pillow", marker = "platform_machine != 'aarch64' or sys_platform != 'linux'" },
-    { name = "torch", version = "2.7.0+cu128", source = { registry = "https://download.pytorch.org/whl/cu128" }, marker = "platform_machine != 'aarch64' or sys_platform != 'linux'" },
+    { name = "torch", version = "2.7.1+cu128", source = { registry = "https://download.pytorch.org/whl/cu128" }, marker = "platform_machine != 'aarch64' or sys_platform != 'linux'" },
 ]
 wheels = [
-    { url = "https://download.pytorch.org/whl/cu128/torchvision-0.22.0%2Bcu128-cp312-cp312-manylinux_2_28_x86_64.whl", hash = "sha256:06c101f40e1ff94869be14487c91fd5352e376f202fdeafb8f53c58cee2fbeb5" },
-    { url = "https://download.pytorch.org/whl/cu128/torchvision-0.22.0%2Bcu128-cp312-cp312-win_amd64.whl", hash = "sha256:a87393c86649b7e56b4bf859fe95922ee6ec1c1f3b430246fb1a5b51f8aee37a" },
+    { url = "https://download-r2.pytorch.org/whl/cu128/torchvision-0.22.1%2Bcu128-cp312-cp312-manylinux_2_28_x86_64.whl", hash = "sha256:f64ef9bb91d71ab35d8384912a19f7419e35928685bc67544d58f45148334373", upload-time = "2025-06-03T18:37:28Z" },
+    { url = "https://download-r2.pytorch.org/whl/cu128/torchvision-0.22.1%2Bcu128-cp312-cp312-win_amd64.whl", hash = "sha256:650561ba326d21021243f5e064133dc62dc64d52f79623db5cd76637a9665f96", upload-time = "2025-06-03T18:37:28Z" },
 ]
 
 [[package]]
@@ -5995,7 +6199,7 @@ name = "tqdm"
 version = "4.67.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "colorama", marker = "sys_platform == 'win32'" },
+    { name = "colorama", marker = "sys_platform == 'win32' or (extra == 'extra-8-skyagent-skyrl-train' and extra == 'extra-8-skyagent-verl')" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/a8/4b/29b4ef32e036bb34e4ab51796dd745cdba7ed47ad142a9f4a1eb8e0c744d/tqdm-4.67.1.tar.gz", hash = "sha256:f8aef9c52c08c13a65f30ea34f4e5aac3fd1a34959879d7e59e63027286627f2", size = 169737, upload-time = "2024-11-24T20:12:22.481Z" }
 wheels = [
@@ -6015,21 +6219,56 @@ wheels = [
 name = "transformers"
 version = "4.54.1"
 source = { registry = "https://pypi.org/simple" }
+resolution-markers = [
+    "platform_machine == 'aarch64' and sys_platform == 'linux'",
+    "platform_machine != 'aarch64' and sys_platform == 'linux'",
+    "sys_platform == 'darwin'",
+    "sys_platform != 'darwin' and sys_platform != 'linux'",
+]
 dependencies = [
-    { name = "filelock" },
-    { name = "huggingface-hub" },
-    { name = "numpy" },
-    { name = "packaging" },
-    { name = "pyyaml" },
-    { name = "regex" },
-    { name = "requests" },
-    { name = "safetensors" },
-    { name = "tokenizers" },
-    { name = "tqdm" },
+    { name = "filelock", marker = "extra == 'extra-8-skyagent-verl'" },
+    { name = "huggingface-hub", marker = "extra == 'extra-8-skyagent-verl'" },
+    { name = "numpy", marker = "extra == 'extra-8-skyagent-verl'" },
+    { name = "packaging", marker = "extra == 'extra-8-skyagent-verl'" },
+    { name = "pyyaml", marker = "extra == 'extra-8-skyagent-verl'" },
+    { name = "regex", marker = "extra == 'extra-8-skyagent-verl'" },
+    { name = "requests", marker = "extra == 'extra-8-skyagent-verl'" },
+    { name = "safetensors", marker = "extra == 'extra-8-skyagent-verl'" },
+    { name = "tokenizers", version = "0.21.4", source = { registry = "https://pypi.org/simple" }, marker = "extra == 'extra-8-skyagent-verl'" },
+    { name = "tqdm", marker = "extra == 'extra-8-skyagent-verl'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/21/6c/4caeb57926f91d943f309b062e22ad1eb24a9f530421c5a65c1d89378a7a/transformers-4.54.1.tar.gz", hash = "sha256:b2551bb97903f13bd90c9467d0a144d41ca4d142defc044a99502bb77c5c1052", size = 9514288, upload-time = "2025-07-29T15:57:22.826Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/cf/18/eb7578f84ef5a080d4e5ca9bc4f7c68e7aa9c1e464f1b3d3001e4c642fce/transformers-4.54.1-py3-none-any.whl", hash = "sha256:c89965a4f62a0d07009d45927a9c6372848a02ab9ead9c318c3d082708bab529", size = 11176397, upload-time = "2025-07-29T15:57:19.692Z" },
+]
+
+[[package]]
+name = "transformers"
+version = "4.57.6"
+source = { registry = "https://pypi.org/simple" }
+resolution-markers = [
+    "platform_machine != 'aarch64' and sys_platform == 'linux' and extra == 'extra-8-skyagent-skyrl-train' and extra != 'extra-8-skyagent-verl'",
+    "sys_platform == 'darwin' and extra == 'extra-8-skyagent-skyrl-train' and extra != 'extra-8-skyagent-verl'",
+    "sys_platform != 'darwin' and sys_platform != 'linux' and extra == 'extra-8-skyagent-skyrl-train' and extra != 'extra-8-skyagent-verl'",
+    "platform_machine == 'aarch64' and sys_platform == 'linux' and extra == 'extra-8-skyagent-skyrl-train' and extra != 'extra-8-skyagent-verl'",
+    "sys_platform == 'linux' and extra != 'extra-8-skyagent-skyrl-train' and extra != 'extra-8-skyagent-verl'",
+    "sys_platform != 'linux' and extra != 'extra-8-skyagent-skyrl-train' and extra != 'extra-8-skyagent-verl'",
+]
+dependencies = [
+    { name = "filelock", marker = "extra == 'extra-8-skyagent-skyrl-train' or extra != 'extra-8-skyagent-verl'" },
+    { name = "huggingface-hub", marker = "extra == 'extra-8-skyagent-skyrl-train' or extra != 'extra-8-skyagent-verl'" },
+    { name = "numpy", marker = "extra == 'extra-8-skyagent-skyrl-train' or extra != 'extra-8-skyagent-verl'" },
+    { name = "packaging", marker = "extra == 'extra-8-skyagent-skyrl-train' or extra != 'extra-8-skyagent-verl'" },
+    { name = "pyyaml", marker = "extra == 'extra-8-skyagent-skyrl-train' or extra != 'extra-8-skyagent-verl'" },
+    { name = "regex", marker = "extra == 'extra-8-skyagent-skyrl-train' or extra != 'extra-8-skyagent-verl'" },
+    { name = "requests", marker = "extra == 'extra-8-skyagent-skyrl-train' or extra != 'extra-8-skyagent-verl'" },
+    { name = "safetensors", marker = "extra == 'extra-8-skyagent-skyrl-train' or extra != 'extra-8-skyagent-verl'" },
+    { name = "tokenizers", version = "0.22.2", source = { registry = "https://pypi.org/simple" }, marker = "extra == 'extra-8-skyagent-skyrl-train' or extra != 'extra-8-skyagent-verl'" },
+    { name = "tqdm", marker = "extra == 'extra-8-skyagent-skyrl-train' or extra != 'extra-8-skyagent-verl'" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/c4/35/67252acc1b929dc88b6602e8c4a982e64f31e733b804c14bc24b47da35e6/transformers-4.57.6.tar.gz", hash = "sha256:55e44126ece9dc0a291521b7e5492b572e6ef2766338a610b9ab5afbb70689d3", size = 10134912, upload-time = "2026-01-16T10:38:39.284Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/03/b8/e484ef633af3887baeeb4b6ad12743363af7cce68ae51e938e00aaa0529d/transformers-4.57.6-py3-none-any.whl", hash = "sha256:4c9e9de11333ddfe5114bc872c9f370509198acf0b87a832a0ab9458e2bd0550", size = 11993498, upload-time = "2026-01-16T10:38:31.289Z" },
 ]
 
 [[package]]
@@ -6132,10 +6371,7 @@ name = "triton"
 version = "3.2.0"
 source = { registry = "https://pypi.org/simple" }
 resolution-markers = [
-    "platform_machine == 'aarch64' and sys_platform == 'linux'",
     "platform_machine != 'aarch64' and sys_platform == 'linux'",
-    "sys_platform == 'darwin'",
-    "sys_platform != 'darwin' and sys_platform != 'linux'",
 ]
 wheels = [
     { url = "https://files.pythonhosted.org/packages/06/00/59500052cb1cf8cf5316be93598946bc451f14072c6ff256904428eaf03c/triton-3.2.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:8d9b215efc1c26fa7eefb9a157915c92d52e000d2bf83e5f69704047e63f125c", size = 253159365, upload-time = "2025-01-22T19:13:24.648Z" },
@@ -6146,16 +6382,31 @@ name = "triton"
 version = "3.3.0"
 source = { registry = "https://pypi.org/simple" }
 resolution-markers = [
-    "platform_machine != 'aarch64' and sys_platform == 'linux'",
+    "platform_machine == 'aarch64' and sys_platform == 'linux'",
     "sys_platform == 'darwin'",
     "sys_platform != 'darwin' and sys_platform != 'linux'",
-    "platform_machine == 'aarch64' and sys_platform == 'linux'",
 ]
 dependencies = [
-    { name = "setuptools", version = "79.0.1", source = { registry = "https://pypi.org/simple" }, marker = "extra == 'extra-8-skyagent-skyrl-train'" },
+    { name = "setuptools", version = "79.0.1", source = { registry = "https://pypi.org/simple" }, marker = "(sys_platform != 'linux' and extra == 'extra-8-skyagent-skyrl-train') or (extra == 'extra-8-skyagent-skyrl-train' and extra == 'extra-8-skyagent-verl')" },
+    { name = "setuptools", version = "80.9.0", source = { registry = "https://pypi.org/simple" }, marker = "(platform_machine == 'aarch64' and extra == 'extra-8-skyagent-verl') or (platform_machine != 'aarch64' and extra == 'extra-8-skyagent-skyrl-train' and extra == 'extra-8-skyagent-verl') or (sys_platform != 'linux' and extra == 'extra-8-skyagent-verl')" },
 ]
 wheels = [
     { url = "https://files.pythonhosted.org/packages/11/53/ce18470914ab6cfbec9384ee565d23c4d1c55f0548160b1c7b33000b11fd/triton-3.3.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:b68c778f6c4218403a6bd01be7484f6dc9e20fe2083d22dd8aef33e3b87a10a3", size = 156504509, upload-time = "2025-04-09T20:27:40.413Z" },
+]
+
+[[package]]
+name = "triton"
+version = "3.3.1"
+source = { registry = "https://pypi.org/simple" }
+resolution-markers = [
+    "platform_machine != 'aarch64' and sys_platform == 'linux'",
+    "platform_machine == 'aarch64' and sys_platform == 'linux'",
+]
+dependencies = [
+    { name = "setuptools", version = "79.0.1", source = { registry = "https://pypi.org/simple" }, marker = "(sys_platform == 'linux' and extra == 'extra-8-skyagent-skyrl-train') or (extra == 'extra-8-skyagent-skyrl-train' and extra == 'extra-8-skyagent-verl')" },
+]
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/24/5f/950fb373bf9c01ad4eb5a8cd5eaf32cdf9e238c02f9293557a2129b9c4ac/triton-3.3.1-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:9999e83aba21e1a78c1f36f21bce621b77bcaa530277a50484a7cb4a822f6e43", size = 155669138, upload-time = "2025-05-29T23:39:51.771Z" },
 ]
 
 [[package]]
@@ -6339,7 +6590,7 @@ dependencies = [
     { name = "ray" },
     { name = "tensordict" },
     { name = "torchdata" },
-    { name = "transformers" },
+    { name = "transformers", version = "4.54.1", source = { registry = "https://pypi.org/simple" } },
     { name = "wandb" },
 ]
 
@@ -6385,7 +6636,7 @@ dependencies = [
     { name = "cachetools" },
     { name = "cloudpickle" },
     { name = "compressed-tensors", version = "0.9.3", source = { registry = "https://pypi.org/simple" } },
-    { name = "depyf" },
+    { name = "depyf", version = "0.18.0", source = { registry = "https://pypi.org/simple" } },
     { name = "einops" },
     { name = "fastapi", extra = ["standard"], marker = "extra == 'extra-8-skyagent-verl'" },
     { name = "filelock" },
@@ -6400,7 +6651,7 @@ dependencies = [
     { name = "ninja" },
     { name = "numba" },
     { name = "numpy" },
-    { name = "openai", version = "1.98.0", source = { registry = "https://pypi.org/simple" } },
+    { name = "openai" },
     { name = "opencv-python-headless" },
     { name = "opentelemetry-api" },
     { name = "opentelemetry-exporter-otlp" },
@@ -6425,12 +6676,12 @@ dependencies = [
     { name = "setuptools", version = "80.9.0", source = { registry = "https://pypi.org/simple" } },
     { name = "six" },
     { name = "tiktoken" },
-    { name = "tokenizers" },
+    { name = "tokenizers", version = "0.21.4", source = { registry = "https://pypi.org/simple" } },
     { name = "torch", version = "2.6.0+cu124", source = { url = "https://download.pytorch.org/whl/cu124/torch-2.6.0%2Bcu124-cp312-cp312-linux_x86_64.whl" } },
     { name = "torchaudio", version = "2.6.0", source = { registry = "https://pypi.org/simple" } },
     { name = "torchvision", version = "0.21.0+cu124", source = { url = "https://download.pytorch.org/whl/cu124/torchvision-0.21.0%2Bcu124-cp312-cp312-linux_x86_64.whl" } },
     { name = "tqdm" },
-    { name = "transformers" },
+    { name = "transformers", version = "4.54.1", source = { registry = "https://pypi.org/simple" } },
     { name = "typing-extensions" },
     { name = "watchfiles" },
     { name = "xformers", version = "0.0.29.post2", source = { registry = "https://pypi.org/simple" }, marker = "platform_machine == 'x86_64' and sys_platform == 'linux'" },
@@ -6443,7 +6694,7 @@ wheels = [
 
 [[package]]
 name = "vllm"
-version = "0.9.2"
+version = "0.10.1.1"
 source = { registry = "https://pypi.org/simple" }
 resolution-markers = [
     "platform_machine != 'aarch64' and sys_platform == 'linux'",
@@ -6455,25 +6706,27 @@ dependencies = [
     { name = "aiohttp" },
     { name = "blake3" },
     { name = "cachetools" },
+    { name = "cbor2" },
     { name = "cloudpickle" },
     { name = "compressed-tensors", version = "0.10.2", source = { registry = "https://pypi.org/simple" } },
-    { name = "depyf" },
+    { name = "depyf", version = "0.19.0", source = { registry = "https://pypi.org/simple" } },
+    { name = "diskcache" },
     { name = "einops" },
     { name = "fastapi", extra = ["standard"], marker = "extra == 'extra-8-skyagent-skyrl-train'" },
     { name = "filelock" },
     { name = "gguf" },
-    { name = "huggingface-hub", extra = ["hf-xet"], marker = "extra == 'extra-8-skyagent-skyrl-train'" },
     { name = "lark" },
     { name = "llguidance", marker = "platform_machine == 'aarch64' or platform_machine == 'arm64' or platform_machine == 'x86_64'" },
     { name = "lm-format-enforcer" },
-    { name = "mistral-common", extra = ["opencv"], marker = "extra == 'extra-8-skyagent-skyrl-train'" },
+    { name = "mistral-common", extra = ["audio", "image"], marker = "extra == 'extra-8-skyagent-skyrl-train'" },
     { name = "msgspec" },
     { name = "ninja" },
     { name = "numba" },
     { name = "numpy" },
-    { name = "openai", version = "1.90.0", source = { registry = "https://pypi.org/simple" } },
+    { name = "openai" },
+    { name = "openai-harmony" },
     { name = "opencv-python-headless" },
-    { name = "outlines" },
+    { name = "outlines-core", version = "0.2.10", source = { registry = "https://pypi.org/simple" } },
     { name = "partial-json-parser" },
     { name = "pillow" },
     { name = "prometheus-client" },
@@ -6491,24 +6744,25 @@ dependencies = [
     { name = "requests" },
     { name = "scipy" },
     { name = "sentencepiece" },
+    { name = "setproctitle" },
     { name = "setuptools", version = "79.0.1", source = { registry = "https://pypi.org/simple" } },
     { name = "six" },
     { name = "tiktoken" },
-    { name = "tokenizers" },
-    { name = "torch", version = "2.7.0+cu128", source = { registry = "https://download.pytorch.org/whl/cu128" } },
-    { name = "torchaudio", version = "2.7.0", source = { registry = "https://pypi.org/simple" } },
-    { name = "torchvision", version = "0.22.0", source = { registry = "https://download.pytorch.org/whl/cu128" }, marker = "(platform_machine == 'aarch64' and sys_platform == 'linux' and extra == 'extra-8-skyagent-skyrl-train') or (platform_machine != 'aarch64' and extra == 'extra-8-skyagent-skyrl-train' and extra == 'extra-8-skyagent-verl') or (sys_platform != 'linux' and extra == 'extra-8-skyagent-skyrl-train' and extra == 'extra-8-skyagent-verl')" },
-    { name = "torchvision", version = "0.22.0+cu128", source = { registry = "https://download.pytorch.org/whl/cu128" }, marker = "(platform_machine != 'aarch64' and extra == 'extra-8-skyagent-skyrl-train') or (sys_platform != 'linux' and extra == 'extra-8-skyagent-skyrl-train') or (extra == 'extra-8-skyagent-skyrl-train' and extra == 'extra-8-skyagent-verl')" },
+    { name = "tokenizers", version = "0.22.2", source = { registry = "https://pypi.org/simple" } },
+    { name = "torch", version = "2.7.1+cu128", source = { registry = "https://download.pytorch.org/whl/cu128" } },
+    { name = "torchaudio", version = "2.7.1", source = { registry = "https://pypi.org/simple" } },
+    { name = "torchvision", version = "0.22.1", source = { registry = "https://download.pytorch.org/whl/cu128" }, marker = "(platform_machine == 'aarch64' and sys_platform == 'linux' and extra == 'extra-8-skyagent-skyrl-train') or (platform_machine != 'aarch64' and extra == 'extra-8-skyagent-skyrl-train' and extra == 'extra-8-skyagent-verl') or (sys_platform != 'linux' and extra == 'extra-8-skyagent-skyrl-train' and extra == 'extra-8-skyagent-verl')" },
+    { name = "torchvision", version = "0.22.1+cu128", source = { registry = "https://download.pytorch.org/whl/cu128" }, marker = "(platform_machine != 'aarch64' and extra == 'extra-8-skyagent-skyrl-train') or (sys_platform != 'linux' and extra == 'extra-8-skyagent-skyrl-train') or (extra == 'extra-8-skyagent-skyrl-train' and extra == 'extra-8-skyagent-verl')" },
     { name = "tqdm" },
-    { name = "transformers" },
+    { name = "transformers", version = "4.57.6", source = { registry = "https://pypi.org/simple" } },
     { name = "typing-extensions" },
     { name = "watchfiles" },
-    { name = "xformers", version = "0.0.30", source = { registry = "https://pypi.org/simple" }, marker = "platform_machine == 'x86_64' and sys_platform == 'linux'" },
+    { name = "xformers", version = "0.0.31", source = { registry = "https://pypi.org/simple" }, marker = "platform_machine == 'x86_64' and sys_platform == 'linux'" },
     { name = "xgrammar" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/35/89/2fbf95d398b5751b44c7256bd80e57c589142f1bfcc15f5dc76438b8853a/vllm-0.9.2.tar.gz", hash = "sha256:6b0d855ea8ba18d76364c9b82ea94bfcaa9c9e724055438b5733e4716ed104e1", size = 8997087, upload-time = "2025-07-08T04:49:01.722Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/ae/a8/b53e7950c05bf8e6ef4438603a70c8992e7bc90fcad5a7a4f360c7d748a6/vllm-0.10.1.1.tar.gz", hash = "sha256:3099824ee4bdaa14c4c4f7178a092101a0ec206d4c9371edf295849b2b730a39", size = 10510801, upload-time = "2025-08-20T23:17:16.776Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/f4/72/c14ff1acac64294f45782769b9c8144a1c3e8d4f2228d4648197511b015a/vllm-0.9.2-cp38-abi3-manylinux1_x86_64.whl", hash = "sha256:f3c5da29a286f4933b480a5b4749fab226564f35c96928eeef547f88d385cd34", size = 383350132, upload-time = "2025-07-08T04:48:54.133Z" },
+    { url = "https://files.pythonhosted.org/packages/3b/14/6fac6c3f6be5657a70911c8c48062c4749925dc5e24d254b1ec493add7a0/vllm-0.10.1.1-cp38-abi3-manylinux1_x86_64.whl", hash = "sha256:8ca0dd985e1ceac8540e7719c654f1553b3ba8a43c685ac8d3fa1366ffb6443a", size = 414400912, upload-time = "2025-08-20T23:17:09.179Z" },
 ]
 
 [[package]]
@@ -6700,7 +6954,7 @@ name = "xattr"
 version = "1.2.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "cffi", marker = "sys_platform != 'linux' or (extra == 'extra-8-skyagent-skyrl-train' and extra == 'extra-8-skyagent-verl')" },
+    { name = "cffi", marker = "sys_platform == 'darwin' or (sys_platform != 'linux' and extra != 'extra-8-skyagent-skyrl-train' and extra != 'extra-8-skyagent-verl') or (extra == 'extra-8-skyagent-skyrl-train' and extra == 'extra-8-skyagent-verl')" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/50/65/14438ae55acf7f8fc396ee8340d740a3e1d6ef382bf25bf24156cfb83563/xattr-1.2.0.tar.gz", hash = "sha256:a64c8e21eff1be143accf80fd3b8fde3e28a478c37da298742af647ac3e5e0a7", size = 17293, upload-time = "2025-07-14T03:15:44.884Z" }
 wheels = [
@@ -6723,8 +6977,8 @@ resolution-markers = [
     "platform_machine != 'aarch64' and sys_platform == 'linux'",
 ]
 dependencies = [
-    { name = "numpy" },
-    { name = "torch", version = "2.6.0+cu124", source = { url = "https://download.pytorch.org/whl/cu124/torch-2.6.0%2Bcu124-cp312-cp312-linux_x86_64.whl" } },
+    { name = "numpy", marker = "platform_machine != 'aarch64' and sys_platform == 'linux'" },
+    { name = "torch", version = "2.6.0+cu124", source = { url = "https://download.pytorch.org/whl/cu124/torch-2.6.0%2Bcu124-cp312-cp312-linux_x86_64.whl" }, marker = "platform_machine != 'aarch64' and sys_platform == 'linux'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/27/ed/04ec7ef97a7e1c836add41ef5a2aef8cbdd45c0190ca42cc08f3c21e2b7b/xformers-0.0.29.post2.tar.gz", hash = "sha256:6ca3d1a6db6f2abff25c1154adee96987f77f4dfd5141771805afa5fc13e9395", size = 8468494, upload-time = "2025-02-01T02:33:48.209Z" }
 wheels = [
@@ -6734,19 +6988,19 @@ wheels = [
 
 [[package]]
 name = "xformers"
-version = "0.0.30"
+version = "0.0.31"
 source = { registry = "https://pypi.org/simple" }
 resolution-markers = [
     "platform_machine != 'aarch64' and sys_platform == 'linux'",
 ]
 dependencies = [
-    { name = "numpy" },
-    { name = "torch", version = "2.7.0+cu128", source = { registry = "https://download.pytorch.org/whl/cu128" } },
+    { name = "numpy", marker = "platform_machine != 'aarch64' and sys_platform == 'linux'" },
+    { name = "torch", version = "2.7.1+cu128", source = { registry = "https://download.pytorch.org/whl/cu128" }, marker = "platform_machine != 'aarch64' and sys_platform == 'linux'" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/bf/f7/dd2269cce89fd1221947dd7cc3a60707ffe721ef55c1803ac3b1a1f7ae5c/xformers-0.0.30.tar.gz", hash = "sha256:a12bf3eb39e294cdbe8a7253ac9b665f41bac61d6d98df174e34ef7bdb6f2fc4", size = 10214139, upload-time = "2025-04-28T20:51:02.045Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/33/35/91c172a57681e1c03de5ad1ca654dc87c282279b941052ed04e616ae5bcd/xformers-0.0.31.tar.gz", hash = "sha256:3fccb159c6327c13fc1b08f8b963c2779ca526e2e50755dee9bcc1bac67d20c6", size = 12102740, upload-time = "2025-06-25T15:12:10.241Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/e6/c6/6f2c364881da54e51a23c17c50db0518d30353bb6da8b1751be9174df538/xformers-0.0.30-cp312-cp312-manylinux_2_28_x86_64.whl", hash = "sha256:357875986f50f105f445dc9a002c8450623cd4a6a469865c463285d0376fe77b", size = 31521318, upload-time = "2025-04-28T20:50:41.599Z" },
-    { url = "https://files.pythonhosted.org/packages/49/85/28d96d090733ba6859e4195f7c9dcb28196fc2e89197bba5de8d36f1a082/xformers-0.0.30-cp312-cp312-win_amd64.whl", hash = "sha256:8549ca30700d70dae904ec4407c6188cd73fd551e585f862c1d3aca3b7bc371c", size = 108011356, upload-time = "2025-04-28T20:50:46.611Z" },
+    { url = "https://files.pythonhosted.org/packages/ff/e3/ee90c62a3235152d4ea8e983a5eb7ac00b10582fee86aaadb11571c1ecba/xformers-0.0.31-cp39-abi3-manylinux_2_28_x86_64.whl", hash = "sha256:50aedaea82a38d7d28631f77617d1ed1f6f37c60bdc4bf167a69cbc0e39cee76", size = 117057673, upload-time = "2025-06-25T15:11:59.775Z" },
+    { url = "https://files.pythonhosted.org/packages/b5/66/7b60ec52da94a0da3383ba385b43e42cee8854c001b5cb6cf98a909665c8/xformers-0.0.31-cp39-abi3-win_amd64.whl", hash = "sha256:23331bdb9831ba0df96f55258537ca0df7ad888efc75cea97a0de79b5e2291c4", size = 100228305, upload-time = "2025-06-25T15:12:05.924Z" },
 ]
 
 [[package]]
@@ -6760,10 +7014,12 @@ dependencies = [
     { name = "sentencepiece" },
     { name = "tiktoken" },
     { name = "torch", version = "2.6.0+cu124", source = { url = "https://download.pytorch.org/whl/cu124/torch-2.6.0%2Bcu124-cp312-cp312-linux_x86_64.whl" }, marker = "extra == 'extra-8-skyagent-verl'" },
-    { name = "torch", version = "2.7.0+cu128", source = { registry = "https://download.pytorch.org/whl/cu128" }, marker = "extra == 'extra-8-skyagent-skyrl-train'" },
-    { name = "transformers" },
-    { name = "triton", version = "3.2.0", source = { registry = "https://pypi.org/simple" }, marker = "(platform_machine == 'x86_64' and platform_system == 'linux' and extra == 'extra-8-skyagent-verl') or (platform_machine != 'x86_64' and extra == 'extra-8-skyagent-skyrl-train' and extra == 'extra-8-skyagent-verl') or (platform_system != 'linux' and extra == 'extra-8-skyagent-skyrl-train' and extra == 'extra-8-skyagent-verl')" },
-    { name = "triton", version = "3.3.0", source = { registry = "https://pypi.org/simple" }, marker = "(platform_machine == 'x86_64' and platform_system == 'linux' and extra == 'extra-8-skyagent-skyrl-train') or (platform_machine != 'x86_64' and extra == 'extra-8-skyagent-skyrl-train' and extra == 'extra-8-skyagent-verl') or (platform_system != 'linux' and extra == 'extra-8-skyagent-skyrl-train' and extra == 'extra-8-skyagent-verl')" },
+    { name = "torch", version = "2.7.1+cu128", source = { registry = "https://download.pytorch.org/whl/cu128" }, marker = "extra == 'extra-8-skyagent-skyrl-train'" },
+    { name = "transformers", version = "4.54.1", source = { registry = "https://pypi.org/simple" }, marker = "extra == 'extra-8-skyagent-verl'" },
+    { name = "transformers", version = "4.57.6", source = { registry = "https://pypi.org/simple" }, marker = "extra == 'extra-8-skyagent-skyrl-train'" },
+    { name = "triton", version = "3.2.0", source = { registry = "https://pypi.org/simple" }, marker = "(platform_machine == 'x86_64' and platform_system == 'linux' and sys_platform == 'linux' and extra == 'extra-8-skyagent-verl') or (platform_machine != 'x86_64' and extra == 'extra-8-skyagent-skyrl-train' and extra == 'extra-8-skyagent-verl') or (platform_system != 'linux' and extra == 'extra-8-skyagent-skyrl-train' and extra == 'extra-8-skyagent-verl') or (sys_platform != 'linux' and extra == 'extra-8-skyagent-skyrl-train' and extra == 'extra-8-skyagent-verl')" },
+    { name = "triton", version = "3.3.0", source = { registry = "https://pypi.org/simple" }, marker = "(platform_machine == 'x86_64' and platform_system == 'linux' and sys_platform != 'linux' and extra == 'extra-8-skyagent-skyrl-train') or (platform_machine == 'x86_64' and platform_system == 'linux' and sys_platform != 'linux' and extra == 'extra-8-skyagent-verl') or (platform_machine != 'x86_64' and extra == 'extra-8-skyagent-skyrl-train' and extra == 'extra-8-skyagent-verl') or (platform_system != 'linux' and extra == 'extra-8-skyagent-skyrl-train' and extra == 'extra-8-skyagent-verl') or (sys_platform == 'linux' and extra == 'extra-8-skyagent-skyrl-train' and extra == 'extra-8-skyagent-verl')" },
+    { name = "triton", version = "3.3.1", source = { registry = "https://pypi.org/simple" }, marker = "(platform_machine == 'x86_64' and platform_system == 'linux' and sys_platform == 'linux' and extra == 'extra-8-skyagent-skyrl-train') or (platform_machine != 'x86_64' and extra == 'extra-8-skyagent-skyrl-train' and extra == 'extra-8-skyagent-verl') or (platform_system != 'linux' and extra == 'extra-8-skyagent-skyrl-train' and extra == 'extra-8-skyagent-verl') or (sys_platform != 'linux' and extra == 'extra-8-skyagent-skyrl-train' and extra == 'extra-8-skyagent-verl')" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/e6/f9/6d530ce703cf5aae65d594a5ab984b9c0c4956e6fdbcc3279e8b1eaa358e/xgrammar-0.1.17.tar.gz", hash = "sha256:8f6cd7b3436482ad8c94b6cc93892a7f36381315c443e8e7f256f8d71c3efdee", size = 1679977, upload-time = "2025-03-25T11:08:13.458Z" }
 wheels = [
